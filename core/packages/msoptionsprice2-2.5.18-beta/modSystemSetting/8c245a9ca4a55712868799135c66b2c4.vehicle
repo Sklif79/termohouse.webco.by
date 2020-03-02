@@ -1,0 +1,16 @@
+<?php return array (
+  'unique_key' => 'key',
+  'preserve_keys' => true,
+  'update_object' => false,
+  'namespace' => 'msoptionsprice',
+  'resolve' => NULL,
+  'validate' => NULL,
+  'vehicle_package' => 'transport',
+  'vehicle_class' => 'xPDOObjectVehicle',
+  'guid' => 'd9fffa73e7cab3ef22fa42cf1cebfc4f',
+  'package' => 'modx',
+  'class' => 'modSystemSetting',
+  'signature' => '8c245a9ca4a55712868799135c66b2c4',
+  'native_key' => 'msoptionsprice_working_templates',
+  'object' => '{"key":"msoptionsprice_working_templates","value":"1,2,3,4","xtype":"textfield","namespace":"msoptionsprice","area":"msoptionsprice_main","editedon":null}',
+);

@@ -1,0 +1,15 @@
+<?php return array (
+  'unique_key' => 'key',
+  'preserve_keys' => true,
+  'update_object' => true,
+  'class' => 'modSystemSetting',
+  'resolve' => NULL,
+  'validate' => NULL,
+  'package' => 'modx',
+  'vehicle_package' => 'transport',
+  'vehicle_class' => 'xPDOObjectVehicle',
+  'guid' => 'ae43b7fd059b325b5e9a7dd920bdda7c',
+  'signature' => 'be9fa279a530f4224d6214df29e19c34',
+  'native_key' => NULL,
+  'object' => '{"key":"ms2_payment_bepaid_api_version","namespace":"minishop2","area":"ms2_payment_bepaid","editedon":null,"xtype":"textfield","value":"2.1"}',
+);

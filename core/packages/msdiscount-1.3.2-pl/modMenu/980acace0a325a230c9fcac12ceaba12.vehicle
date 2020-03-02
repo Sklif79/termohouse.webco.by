@@ -1,0 +1,50 @@
+<?php return array (
+  'preserve_keys' => true,
+  'update_object' => false,
+  'unique_key' => 'text',
+  'related_objects' => 
+  array (
+    'Action' => 
+    array (
+      '6aea4c2009b4d0bff2232493cf14f681' => 
+      array (
+        'preserve_keys' => false,
+        'update_object' => false,
+        'unique_key' => 
+        array (
+          0 => 'namespace',
+          1 => 'controller',
+        ),
+        'class' => 'modAction',
+        'object' => '{"id":0,"namespace":"msdiscount","controller":"index","haslayout":1,"lang_topics":"msdiscount:default","assets":"","help_url":"","parent":0}',
+        'guid' => 'f718346744e1a0da1bf66027272986ab',
+        'native_key' => 0,
+        'signature' => 'b4ba0c981ad058761c1b8f83ddfe05c3',
+      ),
+    ),
+  ),
+  'related_object_attributes' => 
+  array (
+    'Action' => 
+    array (
+      'preserve_keys' => false,
+      'update_object' => false,
+      'unique_key' => 
+      array (
+        0 => 'namespace',
+        1 => 'controller',
+      ),
+    ),
+  ),
+  'namespace' => 'msdiscount',
+  'resolve' => NULL,
+  'validate' => NULL,
+  'vehicle_package' => 'transport',
+  'vehicle_class' => 'xPDOObjectVehicle',
+  'guid' => '6e2bedb67a090d04e90618c146a712be',
+  'package' => 'modx',
+  'class' => 'modMenu',
+  'signature' => '980acace0a325a230c9fcac12ceaba12',
+  'native_key' => 'msdiscount',
+  'object' => '{"text":"msdiscount","parent":"minishop2","action":0,"description":"msdiscount_menu_desc","icon":"images\\/icons\\/plugin.gif","menuindex":0,"params":"","handler":"","permissions":"","namespace":"core"}',
+);

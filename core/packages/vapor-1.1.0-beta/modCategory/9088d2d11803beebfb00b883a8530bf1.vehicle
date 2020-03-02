@@ -1,0 +1,51 @@
+<?php return array (
+  'unique_key' => 'category',
+  'preserve_keys' => false,
+  'update_object' => true,
+  'related_objects' => true,
+  'related_object_attributes' => 
+  array (
+    'Chunks' => 
+    array (
+      'preserve_keys' => false,
+      'update_object' => true,
+      'unique_key' => 'name',
+    ),
+    'TemplateVars' => 
+    array (
+      'preserve_keys' => false,
+      'update_object' => true,
+      'unique_key' => 'name',
+    ),
+    'Templates' => 
+    array (
+      'preserve_keys' => false,
+      'update_object' => true,
+      'unique_key' => 'templatename',
+    ),
+    'Snippets' => 
+    array (
+      'preserve_keys' => false,
+      'update_object' => true,
+      'unique_key' => 'name',
+    ),
+  ),
+  'namespace' => 'vapor',
+  'resolve' => 
+  array (
+    0 => 
+    array (
+      'type' => 'file',
+      'body' => '{"source":"vapor-1.1.0-beta\\/modCategory\\/9088d2d11803beebfb00b883a8530bf1\\/0\\/","target":"return \\"\\".MODX_BASE_PATH.\\"\\/\\";","name":"vapor"}',
+    ),
+  ),
+  'validate' => NULL,
+  'vehicle_package' => 'transport',
+  'vehicle_class' => 'xPDOObjectVehicle',
+  'guid' => '24398bda2093ac9455f11a5c52506c2b',
+  'package' => 'modx',
+  'class' => 'modCategory',
+  'signature' => '9088d2d11803beebfb00b883a8530bf1',
+  'native_key' => 1,
+  'object' => '{"id":1,"parent":0,"category":"Vapor"}',
+);

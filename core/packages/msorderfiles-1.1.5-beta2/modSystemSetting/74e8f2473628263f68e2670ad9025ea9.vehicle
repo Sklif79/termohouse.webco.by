@@ -1,0 +1,16 @@
+<?php return array (
+  'unique_key' => 'key',
+  'preserve_keys' => true,
+  'update_object' => false,
+  'namespace' => 'msorderfiles',
+  'resolve' => NULL,
+  'validate' => NULL,
+  'vehicle_package' => 'transport',
+  'vehicle_class' => 'xPDOObjectVehicle',
+  'guid' => '20e1cd957dc155b25c9a181c81268911',
+  'package' => 'modx',
+  'class' => 'modSystemSetting',
+  'signature' => '74e8f2473628263f68e2670ad9025ea9',
+  'native_key' => 'msof_source',
+  'object' => '{"key":"msof_source","value":"","xtype":"modx-combo-source","namespace":"msorderfiles","area":"msof_main","editedon":null}',
+);

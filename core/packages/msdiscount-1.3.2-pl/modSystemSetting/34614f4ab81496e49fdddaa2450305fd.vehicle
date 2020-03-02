@@ -1,0 +1,16 @@
+<?php return array (
+  'unique_key' => 'key',
+  'preserve_keys' => true,
+  'update_object' => false,
+  'namespace' => 'msdiscount',
+  'resolve' => NULL,
+  'validate' => NULL,
+  'vehicle_package' => 'transport',
+  'vehicle_class' => 'xPDOObjectVehicle',
+  'guid' => 'd6906dee17cf6ab5049e982c47c1da15',
+  'package' => 'modx',
+  'class' => 'modSystemSetting',
+  'signature' => '34614f4ab81496e49fdddaa2450305fd',
+  'native_key' => 'msd_price_round',
+  'object' => '{"key":"msd_price_round","value":false,"xtype":"combo-boolean","namespace":"msdiscount","area":"msd_main","editedon":null}',
+);

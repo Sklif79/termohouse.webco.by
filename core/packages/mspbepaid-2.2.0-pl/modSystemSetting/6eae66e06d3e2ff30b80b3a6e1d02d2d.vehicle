@@ -1,0 +1,15 @@
+<?php return array (
+  'unique_key' => 'key',
+  'preserve_keys' => true,
+  'update_object' => true,
+  'class' => 'modSystemSetting',
+  'resolve' => NULL,
+  'validate' => NULL,
+  'package' => 'modx',
+  'vehicle_package' => 'transport',
+  'vehicle_class' => 'xPDOObjectVehicle',
+  'guid' => 'b5dbbb7b4d9837e513ca8dfb09df4637',
+  'signature' => '6eae66e06d3e2ff30b80b3a6e1d02d2d',
+  'native_key' => NULL,
+  'object' => '{"key":"ms2_payment_bepaid_erip_service_id","namespace":"minishop2","area":"ms2_payment_bepaid","editedon":null,"xtype":"textfield","value":""}',
+);

@@ -1,0 +1,105 @@
+<?php
+
+if ($object->xpdo) {
+    /** @var modX $modx */
+    $modx = &$object->xpdo;
+
+    /** @var array $options */
+    switch ($options[xPDOTransport::PACKAGE_ACTION]) {
+        case xPDOTransport::ACTION_INSTALL:
+        case xPDOTransport::ACTION_UPGRADE:
+            $tmp = explode('/', MODX_ASSETS_URL);
+            $assets = $tmp[count($tmp) - 2];
+
+            $properties = array(
+                'name' => 'msOrderFiles',
+                'description' => 'Default media source for other files from msOrderFiles package',
+                'class_key' => 'sources.modFileMediaSource',
+                'properties' => array(
+                    'basePath' => array(
+                        'name' => 'basePath',
+                        'desc' => 'prop_file.basePath_desc',
+                        'type' => 'textfield',
+                        'lexicon' => 'core:source',
+                        'value' => $assets . '/msof/',
+                    ),
+                    'baseUrl' => array(
+                        'name' => 'baseUrl',
+                        'desc' => 'prop_file.baseUrl_desc',
+                        'type' => 'textfield',
+                        'lexicon' => 'core:source',
+                        'value' => $assets . '/msof/',
+                    ),
+                    'allowedFileTypes' => array(
+                        'name' => 'allowedFileTypes',
+                        'desc' => 'msof_source_allowedFileTypes_desc',
+                        'type' => 'textfield',
+                        'lexicon' => 'msorderfiles:setting',
+                        'value' => 'jpg,jpeg,png,gif,mp4,zip,rar,bz2,gz,tar,csv,xls,xlsx,doc,docx,ppt,pptx,odt,pdf,txt',
+                    ),
+                    // 'maxFileSize' => array(
+                    //     'name' => 'maxFileSize',
+                    //     'desc' => 'msof_source_maxFileSize_desc',
+                    //     'type' => 'numberfield',
+                    //     'lexicon' => 'msorderfiles:setting',
+                    //     'value' => 20971520,
+                    // ),
+                    'fileNameType' => array(
+                        'name' => 'fileNameType',
+                        'desc' => 'msof_source_fileNameType_desc',
+                        'type' => 'list',
+                        'lexicon' => 'msorderfiles:setting',
+                        'options' => array(
+                            array('text' => 'Hash', 'value' => 'hash'),
+                            array('text' => 'Friendly', 'value' => 'friendly'),
+                        ),
+                        'value' => 'friendly',
+                    ),
+                    'positionNewFiles' => array(
+                        'name' => 'positionNewFiles',
+                        'desc' => 'msof_source_positionNewFiles_desc',
+                        'type' => 'list',
+                        'lexicon' => 'msorderfiles:setting',
+                        'options' => array(
+                            array('text' => 'В начало', 'value' => 'first'),
+                            array('text' => 'В конец', 'value' => 'last'),
+                        ),
+                        'value' => 'first',
+                    ),
+                ),
+                'is_stream' => 1,
+            );
+
+            /** @var $source modMediaSource */
+            if (!$source = $modx->getObject('sources.modMediaSource', array('name' => $properties['name']))) {
+                $source = $modx->newObject('sources.modMediaSource', $properties);
+            } else {
+                $default = $source->get('properties');
+                foreach ($properties['properties'] as $k => $v) {
+                    if (!array_key_exists($k, $default)) {
+                        $default[$k] = $v;
+                    }
+                }
+                $source->set('properties', $default);
+            }
+            $source->save();
+
+            foreach (array('msof_source') as $setting_name) {
+                if ($setting = $modx->getObject('modSystemSetting', array('key' => $setting_name))) {
+                    if (!$setting->get('value')) {
+                        $setting->set('value', $source->get('id'));
+                        $setting->save();
+                    }
+                    unset($setting);
+                }
+            }
+
+            @mkdir(MODX_ASSETS_PATH . 'msof/', 0755, true);
+            break;
+
+        case xPDOTransport::ACTION_UNINSTALL:
+            break;
+    }
+}
+
+return true;

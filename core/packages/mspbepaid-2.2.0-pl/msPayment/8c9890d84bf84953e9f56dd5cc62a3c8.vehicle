@@ -1,0 +1,15 @@
+<?php return array (
+  'unique_key' => 'class',
+  'preserve_keys' => false,
+  'update_object' => false,
+  'resolve' => NULL,
+  'validate' => NULL,
+  'package' => 'minishop2',
+  'vehicle_package' => 'transport',
+  'vehicle_class' => 'xPDOObjectVehicle',
+  'guid' => '03acd62f8e3c04a988462c8ebdfafa83',
+  'class' => 'msPayment',
+  'signature' => '8c9890d84bf84953e9f56dd5cc62a3c8',
+  'native_key' => NULL,
+  'object' => '{"id":null,"name":"BePaid \\u2013 ERIP","description":null,"price":0,"logo":null,"rank":0,"active":0,"class":"BePaidErip","properties":null}',
+);

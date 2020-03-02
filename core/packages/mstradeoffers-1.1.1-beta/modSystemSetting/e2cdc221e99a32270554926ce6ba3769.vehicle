@@ -1,0 +1,16 @@
+<?php return array (
+  'unique_key' => 'key',
+  'preserve_keys' => true,
+  'update_object' => false,
+  'namespace' => 'msto',
+  'resolve' => NULL,
+  'validate' => NULL,
+  'vehicle_package' => 'transport',
+  'vehicle_class' => 'xPDOObjectVehicle',
+  'guid' => 'a448ce461c15971469cf587b3fe1b910',
+  'package' => 'modx',
+  'class' => 'modSystemSetting',
+  'signature' => 'e2cdc221e99a32270554926ce6ba3769',
+  'native_key' => 'msto_show_desc',
+  'object' => '{"key":"msto_show_desc","value":true,"xtype":"combo-boolean","namespace":"msto","area":"msto_product","editedon":null}',
+);

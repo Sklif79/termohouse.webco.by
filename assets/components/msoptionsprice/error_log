@@ -1,0 +1,5 @@
+[26-Feb-2020 14:23:24 Europe/Minsk] PHP Fatal error:  Call to a member function get() on null in /home/enbby/public_html/core/components/msoptionsprice/processors/web/modification/get.class.php on line 99
+[26-Feb-2020 14:23:26 Europe/Minsk] PHP Fatal error:  Call to a member function get() on null in /home/enbby/public_html/core/components/msoptionsprice/processors/web/modification/get.class.php on line 99
+[26-Feb-2020 14:23:26 Europe/Minsk] PHP Fatal error:  Call to a member function get() on null in /home/enbby/public_html/core/components/msoptionsprice/processors/web/modification/get.class.php on line 99
+[26-Feb-2020 14:23:26 Europe/Minsk] PHP Fatal error:  Call to a member function get() on null in /home/enbby/public_html/core/components/msoptionsprice/processors/web/modification/get.class.php on line 99
+[26-Feb-2020 14:23:45 Europe/Minsk] PHP Fatal error:  Call to a member function get() on null in /home/enbby/public_html/core/components/msoptionsprice/processors/web/modification/get.class.php on line 99

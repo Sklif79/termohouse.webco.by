@@ -1,0 +1,98 @@
+<?php return array (
+  'preserve_keys' => false,
+  'unique_key' => 
+  array (
+    0 => 'name',
+  ),
+  'update_object' => true,
+  'related_objects' => 
+  array (
+    'Permissions' => 
+    array (
+      '5d8ce3c8edbf60ebff513e005d45a07f' => 
+      array (
+        'preserve_keys' => false,
+        'update_object' => true,
+        'unique_key' => 
+        array (
+          0 => 'template',
+          1 => 'name',
+        ),
+        'class' => 'modAccessPermission',
+        'object' => '{"id":null,"template":0,"name":"msof_file_list","description":"msof_file_list","value":1}',
+        'guid' => '8557be1e0c86add241318ecbc723e862',
+        'native_key' => NULL,
+        'signature' => '91b9c81dc20767a6cd46e3a20d33f352',
+      ),
+      'cf3181357dbb16644cebd896d8ff509e' => 
+      array (
+        'preserve_keys' => false,
+        'update_object' => true,
+        'unique_key' => 
+        array (
+          0 => 'template',
+          1 => 'name',
+        ),
+        'class' => 'modAccessPermission',
+        'object' => '{"id":null,"template":0,"name":"msof_file_upload","description":"msof_file_upload","value":1}',
+        'guid' => 'dbb0bb7367ee97332e43b35553c14e1c',
+        'native_key' => NULL,
+        'signature' => '97716fb781ef8df4b9175b43914296bc',
+      ),
+      '6d9021f6151d9229dac9770b3cb18f95' => 
+      array (
+        'preserve_keys' => false,
+        'update_object' => true,
+        'unique_key' => 
+        array (
+          0 => 'template',
+          1 => 'name',
+        ),
+        'class' => 'modAccessPermission',
+        'object' => '{"id":null,"template":0,"name":"msof_file_update","description":"msof_file_update","value":1}',
+        'guid' => '92629f143e60f6e22430e87f0ae6c1bd',
+        'native_key' => NULL,
+        'signature' => 'bc39a54fd0a0b55a069f6d35a1e047e9',
+      ),
+      '118436ed836eb8b2f8fdc69ca3833945' => 
+      array (
+        'preserve_keys' => false,
+        'update_object' => true,
+        'unique_key' => 
+        array (
+          0 => 'template',
+          1 => 'name',
+        ),
+        'class' => 'modAccessPermission',
+        'object' => '{"id":null,"template":0,"name":"msof_file_remove","description":"msof_file_remove","value":1}',
+        'guid' => 'ab8b029aefd517f7382e1d657b8a2760',
+        'native_key' => NULL,
+        'signature' => '401369876e03e8d365e82b056aee7cc1',
+      ),
+    ),
+  ),
+  'related_object_attributes' => 
+  array (
+    'Permissions' => 
+    array (
+      'preserve_keys' => false,
+      'update_object' => true,
+      'unique_key' => 
+      array (
+        0 => 'template',
+        1 => 'name',
+      ),
+    ),
+  ),
+  'namespace' => 'msorderfiles',
+  'resolve' => NULL,
+  'validate' => NULL,
+  'vehicle_package' => 'transport',
+  'vehicle_class' => 'xPDOObjectVehicle',
+  'guid' => 'afb68fb8dc84fb90c0ec6e2a970da3b3',
+  'package' => 'modx',
+  'class' => 'modAccessPolicyTemplate',
+  'signature' => 'b95428064ada79f5cb281fb4941d4ab5',
+  'native_key' => NULL,
+  'object' => '{"id":null,"template_group":1,"name":"msOrderFilesPolicyTemplate","description":"A policy for users to create \\/ update msOrderFiles.","lexicon":"msorderfiles:permissions","permissions":{"msof_file_list":[],"msof_file_upload":[],"msof_file_update":[],"msof_file_remove":[]}}',
+);

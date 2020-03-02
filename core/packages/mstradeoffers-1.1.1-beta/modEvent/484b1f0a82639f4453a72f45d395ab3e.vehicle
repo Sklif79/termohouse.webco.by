@@ -1,0 +1,15 @@
+<?php return array (
+  'preserve_keys' => true,
+  'update_object' => true,
+  'namespace' => 'msto',
+  'resolve' => NULL,
+  'validate' => NULL,
+  'vehicle_package' => 'transport',
+  'vehicle_class' => 'xPDOObjectVehicle',
+  'guid' => 'aed75d8954c7d8761cef6d056488d1df',
+  'package' => 'modx',
+  'class' => 'modEvent',
+  'signature' => '484b1f0a82639f4453a72f45d395ab3e',
+  'native_key' => 'mstoOnCreateOffer',
+  'object' => '{"name":"mstoOnCreateOffer","service":6,"groupname":"msTradeOffers"}',
+);

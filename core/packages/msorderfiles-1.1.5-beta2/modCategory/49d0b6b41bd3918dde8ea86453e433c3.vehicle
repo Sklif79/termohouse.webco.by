@@ -1,0 +1,197 @@
+<?php return array (
+  'unique_key' => 'category',
+  'preserve_keys' => false,
+  'update_object' => true,
+  'related_objects' => 
+  array (
+    'Chunks' => 
+    array (
+      '96e1d5e86ff0b49a1cf5d1027bef80e8' => 
+      array (
+        'preserve_keys' => false,
+        'update_object' => true,
+        'unique_key' => 'name',
+        'class' => 'modChunk',
+        'object' => '{"id":0,"source":1,"property_preprocess":0,"name":"tpl.msof.form","description":"","editor_type":0,"category":0,"cache_type":0,"snippet":"<div class=\\"msof-form-wrapper [ js-msof-form-wrapper ]\\">\\n    <div class=\\"msof-form [ js-msof-form ]\\" data-msof-propkey=\\"{$propkey}\\">\\n        <div class=\\"dz-message\\">\\n            {\'msorderfiles_frontend_message\' | lexicon}\\n        <\\/div>\\n    <\\/div>\\n<\\/div>","locked":0,"properties":null,"static":0,"static_file":"core\\/components\\/msorderfiles\\/elements\\/chunks\\/chunk.form.tpl","content":"<div class=\\"msof-form-wrapper [ js-msof-form-wrapper ]\\">\\n    <div class=\\"msof-form [ js-msof-form ]\\" data-msof-propkey=\\"{$propkey}\\">\\n        <div class=\\"dz-message\\">\\n            {\'msorderfiles_frontend_message\' | lexicon}\\n        <\\/div>\\n    <\\/div>\\n<\\/div>"}',
+        'guid' => 'e701bfae57fee4e66235e396510431cd',
+        'native_key' => 0,
+        'signature' => 'abdc9316240445c5c5c02b5ca5cd9b90',
+      ),
+    ),
+    'Snippets' => 
+    array (
+      'eaa68686c41a48031bebcfc5daa7d0af' => 
+      array (
+        'preserve_keys' => false,
+        'update_object' => true,
+        'unique_key' => 'name',
+        'class' => 'modSnippet',
+        'object' => '{"id":0,"source":1,"property_preprocess":0,"name":"msofForm","description":"","editor_type":0,"category":0,"cache_type":0,"snippet":"\\/** @var modX $modx *\\/\\n\\/** @var msOrderFiles $msof *\\/\\n\\/** @var array $scriptProperties *\\/\\n\\n$sp = &$scriptProperties;\\n$modelPath = MODX_CORE_PATH . \'components\\/msorderfiles\\/model\\/msorderfiles\\/\';\\nif (!$msof = $modx->getService(\'msorderfiles\', \'msOrderFiles\', $modelPath)) {\\n    return \'Could not load msOrderFiles class!\';\\n}\\n$msof->initialize($modx->context->key);\\n\\n\\/\\/ \\u041f\\u043e\\u043b\\u0443\\u0447\\u0430\\u0435\\u043c \\u043f\\u0430\\u0440\\u0430\\u043c\\u0435\\u0442\\u0440\\u044b\\n$sp[\'ctx\'] = $modx->context->key;\\n$sp[\'tpl\'] = $modx->getOption(\'tpl\', $sp, \'tpl.msof.form\');\\n$sp[\'order\'] = (int)$modx->getOption(\'order\', $sp, 0);\\n$sp[\'user\'] = $modx->getOption(\'user\', $sp, 0);\\n$sp[\'user\'] = (int)(!empty($sp[\'user\']) ? $sp[\'user\'] : $modx->user->id);\\n$sp[\'source\'] = $modx->getOption(\'source\', $sp, 0);\\n$sp[\'source\'] = (int)(!empty($sp[\'source\']) ? $sp[\'source\'] : $msof->config[\'mediaSource\']);\\n$sp[\'anonym\'] = (bool)$modx->getOption(\'anonym\', $sp, true);\\n$sp[\'secret\'] = $modx->getOption(\'secret\', $sp, \'qwerty\');\\n$sp[\'dropzone\'] = $modx->getOption(\'dropzone\', $sp, array());\\n$sp[\'maxFiles\'] = $modx->getOption(\'maxFiles\', $sp, 2);\\n$sp[\'maxFilesize\'] = $modx->getOption(\'maxFilesize\', $sp, 2);\\n$sp[\'timeout\'] = $modx->getOption(\'timeout\', $sp, 90000);\\n$sp[\'toPlaceholder\'] = $modx->getOption(\'toPlaceholder\', $sp, false);\\n\\n\\/\\/ \\u0421\\u043a\\u0440\\u044b\\u0432\\u0430\\u0435\\u043c \\u0434\\u043b\\u044f \\u0430\\u043d\\u043e\\u043d\\u0438\\u043c\\u043e\\u0432, \\u0435\\u0441\\u043b\\u0438 \\u043d\\u0430\\u0434\\u043e\\nif (!$sp[\'anonym\'] && !$modx->user->id) {\\n    return \'\';\\n}\\n\\n\\/\\/ \\u0414\\u0435\\u043a\\u043e\\u0434\\u0438\\u0440\\u0443\\u0435\\u043c JSON \\u043c\\u0430\\u0441\\u0441\\u0438\\u0432\\nforeach (array(\'dropzone\') as $v) {\\n    if (isset($sp[$v])) {\\n        if (!is_array($sp[$v]) && $msof->Tools->isJSON($sp[$v])) {\\n            $sp[$v] = $modx->fromJSON($sp[$v]);\\n        }\\n        if (!is_array($sp[$v])) {\\n            $sp[$v] = array();\\n        }\\n    }\\n}\\n\\n\\/\\/ \\u0421\\u043e\\u0431\\u0438\\u0440\\u0430\\u0435\\u043c \\u043f\\u0430\\u0440\\u0430\\u043c\\u0435\\u0442\\u0440\\u044b \\u0434\\u043b\\u044f \\u0432\\u044b\\u0432\\u043e\\u0434\\u0430\\n$params = $sp;\\nunset($params[\'tpl\']);\\n\\n\\/\\/ \\u0417\\u0430\\u043f\\u0438\\u0441\\u044b\\u0432\\u0430\\u0435\\u043c \\u043f\\u0430\\u0440\\u0430\\u043c\\u0435\\u0442\\u0440\\u044b \\u0441\\u043d\\u0438\\u043f\\u043f\\u0435\\u0442\\u0430 \\u0432 \\u0441\\u0435\\u0441\\u0441\\u0438\\u044e\\n$params[\'propkey\'] = sha1(serialize($sp));\\n$msof->saveProperties($params[\'propkey\'], $sp);\\n\\n\\/\\/\\n$msof->loadFrontendScripts(null, array(\\n    \'propkey\' => $params[\'propkey\'],\\n    \'ctx\' => $sp[\'ctx\'],\\n    \'dropzone\' => $sp[\'dropzone\'],\\n    \'maxFiles\' => $sp[\'maxFiles\'],\\n    \'maxFilesize\' => $sp[\'maxFilesize\'],\\n    \'timeout\' => $sp[\'timeout\'],\\n));\\n\\n\\/\\/\\n$output = $msof->Tools->getChunk($sp[\'tpl\'], $params);\\nif ($sp[\'toPlaceholder\']) {\\n    $modx->setPlaceholder($sp[\'toPlaceholder\'], $output);\\n    $output = \'\';\\n}\\n\\nreturn $output;","locked":0,"properties":"a:11:{s:3:\\"tpl\\";a:7:{s:4:\\"name\\";s:3:\\"tpl\\";s:4:\\"desc\\";s:21:\\"msorderfiles_prop_tpl\\";s:4:\\"type\\";s:9:\\"textfield\\";s:7:\\"options\\";a:0:{}s:5:\\"value\\";s:13:\\"tpl.msof.form\\";s:7:\\"lexicon\\";s:23:\\"msorderfiles:properties\\";s:4:\\"area\\";s:0:\\"\\";}s:5:\\"order\\";a:7:{s:4:\\"name\\";s:5:\\"order\\";s:4:\\"desc\\";s:23:\\"msorderfiles_prop_order\\";s:4:\\"type\\";s:11:\\"numberfield\\";s:7:\\"options\\";a:0:{}s:5:\\"value\\";i:0;s:7:\\"lexicon\\";s:23:\\"msorderfiles:properties\\";s:4:\\"area\\";s:0:\\"\\";}s:6:\\"source\\";a:7:{s:4:\\"name\\";s:6:\\"source\\";s:4:\\"desc\\";s:24:\\"msorderfiles_prop_source\\";s:4:\\"type\\";s:11:\\"numberfield\\";s:7:\\"options\\";a:0:{}s:5:\\"value\\";i:0;s:7:\\"lexicon\\";s:23:\\"msorderfiles:properties\\";s:4:\\"area\\";s:0:\\"\\";}s:4:\\"user\\";a:7:{s:4:\\"name\\";s:4:\\"user\\";s:4:\\"desc\\";s:22:\\"msorderfiles_prop_user\\";s:4:\\"type\\";s:11:\\"numberfield\\";s:7:\\"options\\";a:0:{}s:5:\\"value\\";i:0;s:7:\\"lexicon\\";s:23:\\"msorderfiles:properties\\";s:4:\\"area\\";s:0:\\"\\";}s:6:\\"anonym\\";a:7:{s:4:\\"name\\";s:6:\\"anonym\\";s:4:\\"desc\\";s:24:\\"msorderfiles_prop_anonym\\";s:4:\\"type\\";s:13:\\"combo-boolean\\";s:7:\\"options\\";a:0:{}s:5:\\"value\\";b:1;s:7:\\"lexicon\\";s:23:\\"msorderfiles:properties\\";s:4:\\"area\\";s:0:\\"\\";}s:6:\\"secret\\";a:7:{s:4:\\"name\\";s:6:\\"secret\\";s:4:\\"desc\\";s:24:\\"msorderfiles_prop_secret\\";s:4:\\"type\\";s:9:\\"textfield\\";s:7:\\"options\\";a:0:{}s:5:\\"value\\";s:6:\\"qwerty\\";s:7:\\"lexicon\\";s:23:\\"msorderfiles:properties\\";s:4:\\"area\\";s:0:\\"\\";}s:8:\\"dropzone\\";a:7:{s:4:\\"name\\";s:8:\\"dropzone\\";s:4:\\"desc\\";s:26:\\"msorderfiles_prop_dropzone\\";s:4:\\"type\\";s:9:\\"textfield\\";s:7:\\"options\\";a:0:{}s:5:\\"value\\";s:2:\\"{}\\";s:7:\\"lexicon\\";s:23:\\"msorderfiles:properties\\";s:4:\\"area\\";s:0:\\"\\";}s:8:\\"maxFiles\\";a:7:{s:4:\\"name\\";s:8:\\"maxFiles\\";s:4:\\"desc\\";s:26:\\"msorderfiles_prop_maxFiles\\";s:4:\\"type\\";s:11:\\"numberfield\\";s:7:\\"options\\";a:0:{}s:5:\\"value\\";s:1:\\"2\\";s:7:\\"lexicon\\";s:23:\\"msorderfiles:properties\\";s:4:\\"area\\";s:0:\\"\\";}s:11:\\"maxFilesize\\";a:7:{s:4:\\"name\\";s:11:\\"maxFilesize\\";s:4:\\"desc\\";s:29:\\"msorderfiles_prop_maxFilesize\\";s:4:\\"type\\";s:11:\\"numberfield\\";s:7:\\"options\\";a:0:{}s:5:\\"value\\";s:1:\\"2\\";s:7:\\"lexicon\\";s:23:\\"msorderfiles:properties\\";s:4:\\"area\\";s:0:\\"\\";}s:7:\\"timeout\\";a:7:{s:4:\\"name\\";s:7:\\"timeout\\";s:4:\\"desc\\";s:25:\\"msorderfiles_prop_timeout\\";s:4:\\"type\\";s:11:\\"numberfield\\";s:7:\\"options\\";a:0:{}s:5:\\"value\\";s:5:\\"90000\\";s:7:\\"lexicon\\";s:23:\\"msorderfiles:properties\\";s:4:\\"area\\";s:0:\\"\\";}s:13:\\"toPlaceholder\\";a:7:{s:4:\\"name\\";s:13:\\"toPlaceholder\\";s:4:\\"desc\\";s:31:\\"msorderfiles_prop_toPlaceholder\\";s:4:\\"type\\";s:13:\\"combo-boolean\\";s:7:\\"options\\";a:0:{}s:5:\\"value\\";b:0;s:7:\\"lexicon\\";s:23:\\"msorderfiles:properties\\";s:4:\\"area\\";s:0:\\"\\";}}","moduleguid":"","static":0,"static_file":"core\\/components\\/msorderfiles\\/elements\\/snippets\\/snippet.form.php","content":"\\/** @var modX $modx *\\/\\n\\/** @var msOrderFiles $msof *\\/\\n\\/** @var array $scriptProperties *\\/\\n\\n$sp = &$scriptProperties;\\n$modelPath = MODX_CORE_PATH . \'components\\/msorderfiles\\/model\\/msorderfiles\\/\';\\nif (!$msof = $modx->getService(\'msorderfiles\', \'msOrderFiles\', $modelPath)) {\\n    return \'Could not load msOrderFiles class!\';\\n}\\n$msof->initialize($modx->context->key);\\n\\n\\/\\/ \\u041f\\u043e\\u043b\\u0443\\u0447\\u0430\\u0435\\u043c \\u043f\\u0430\\u0440\\u0430\\u043c\\u0435\\u0442\\u0440\\u044b\\n$sp[\'ctx\'] = $modx->context->key;\\n$sp[\'tpl\'] = $modx->getOption(\'tpl\', $sp, \'tpl.msof.form\');\\n$sp[\'order\'] = (int)$modx->getOption(\'order\', $sp, 0);\\n$sp[\'user\'] = $modx->getOption(\'user\', $sp, 0);\\n$sp[\'user\'] = (int)(!empty($sp[\'user\']) ? $sp[\'user\'] : $modx->user->id);\\n$sp[\'source\'] = $modx->getOption(\'source\', $sp, 0);\\n$sp[\'source\'] = (int)(!empty($sp[\'source\']) ? $sp[\'source\'] : $msof->config[\'mediaSource\']);\\n$sp[\'anonym\'] = (bool)$modx->getOption(\'anonym\', $sp, true);\\n$sp[\'secret\'] = $modx->getOption(\'secret\', $sp, \'qwerty\');\\n$sp[\'dropzone\'] = $modx->getOption(\'dropzone\', $sp, array());\\n$sp[\'maxFiles\'] = $modx->getOption(\'maxFiles\', $sp, 2);\\n$sp[\'maxFilesize\'] = $modx->getOption(\'maxFilesize\', $sp, 2);\\n$sp[\'timeout\'] = $modx->getOption(\'timeout\', $sp, 90000);\\n$sp[\'toPlaceholder\'] = $modx->getOption(\'toPlaceholder\', $sp, false);\\n\\n\\/\\/ \\u0421\\u043a\\u0440\\u044b\\u0432\\u0430\\u0435\\u043c \\u0434\\u043b\\u044f \\u0430\\u043d\\u043e\\u043d\\u0438\\u043c\\u043e\\u0432, \\u0435\\u0441\\u043b\\u0438 \\u043d\\u0430\\u0434\\u043e\\nif (!$sp[\'anonym\'] && !$modx->user->id) {\\n    return \'\';\\n}\\n\\n\\/\\/ \\u0414\\u0435\\u043a\\u043e\\u0434\\u0438\\u0440\\u0443\\u0435\\u043c JSON \\u043c\\u0430\\u0441\\u0441\\u0438\\u0432\\nforeach (array(\'dropzone\') as $v) {\\n    if (isset($sp[$v])) {\\n        if (!is_array($sp[$v]) && $msof->Tools->isJSON($sp[$v])) {\\n            $sp[$v] = $modx->fromJSON($sp[$v]);\\n        }\\n        if (!is_array($sp[$v])) {\\n            $sp[$v] = array();\\n        }\\n    }\\n}\\n\\n\\/\\/ \\u0421\\u043e\\u0431\\u0438\\u0440\\u0430\\u0435\\u043c \\u043f\\u0430\\u0440\\u0430\\u043c\\u0435\\u0442\\u0440\\u044b \\u0434\\u043b\\u044f \\u0432\\u044b\\u0432\\u043e\\u0434\\u0430\\n$params = $sp;\\nunset($params[\'tpl\']);\\n\\n\\/\\/ \\u0417\\u0430\\u043f\\u0438\\u0441\\u044b\\u0432\\u0430\\u0435\\u043c \\u043f\\u0430\\u0440\\u0430\\u043c\\u0435\\u0442\\u0440\\u044b \\u0441\\u043d\\u0438\\u043f\\u043f\\u0435\\u0442\\u0430 \\u0432 \\u0441\\u0435\\u0441\\u0441\\u0438\\u044e\\n$params[\'propkey\'] = sha1(serialize($sp));\\n$msof->saveProperties($params[\'propkey\'], $sp);\\n\\n\\/\\/\\n$msof->loadFrontendScripts(null, array(\\n    \'propkey\' => $params[\'propkey\'],\\n    \'ctx\' => $sp[\'ctx\'],\\n    \'dropzone\' => $sp[\'dropzone\'],\\n    \'maxFiles\' => $sp[\'maxFiles\'],\\n    \'maxFilesize\' => $sp[\'maxFilesize\'],\\n    \'timeout\' => $sp[\'timeout\'],\\n));\\n\\n\\/\\/\\n$output = $msof->Tools->getChunk($sp[\'tpl\'], $params);\\nif ($sp[\'toPlaceholder\']) {\\n    $modx->setPlaceholder($sp[\'toPlaceholder\'], $output);\\n    $output = \'\';\\n}\\n\\nreturn $output;"}',
+        'guid' => '47c9be08dba32fe47cbbbf5baf53adf1',
+        'native_key' => 0,
+        'signature' => 'aa9a64249fb9dece63d2f06cbe0a34bc',
+      ),
+    ),
+    'Plugins' => 
+    array (
+      '73b99757b06f870d4b9ee9d6da0f21c2' => 
+      array (
+        'preserve_keys' => false,
+        'update_object' => true,
+        'unique_key' => 'name',
+        'class' => 'modPlugin',
+        'object' => '{"id":null,"source":1,"property_preprocess":0,"name":"msofSystem","description":"","editor_type":0,"category":0,"cache_type":0,"plugincode":"\\/** @var modX $modx *\\/\\n\\/** @var msOrderFiles $msof *\\/\\n\\n$path = MODX_CORE_PATH . \'components\\/msorderfiles\\/model\\/msorderfiles\\/\';\\nif (!is_object($modx->msorderfiles)) {\\n    $msof = $modx->getService(\'msorderfiles\', \'msOrderFiles\', $path);\\n} else {\\n    $msof = $modx->msorderfiles;\\n}\\n$className = \'msof\' . $modx->event->name;\\n$modx->loadClass(\'msofPlugin\', $msof->config[\'pluginsPath\'], true, true);\\n$modx->loadClass($className, $msof->config[\'pluginsPath\'], true, true);\\nif (class_exists($className)) {\\n    $handler = new $className($modx, $scriptProperties);\\n    $handler->run();\\n} else {\\n    \\/\\/ \\u0423\\u0434\\u0430\\u043b\\u044f\\u0435\\u043c \\u0441\\u043e\\u0431\\u044b\\u0442\\u0438\\u0435 \\u0443 \\u043f\\u043b\\u0430\\u0433\\u0438\\u043d\\u0430, \\u0435\\u0441\\u043b\\u0438 \\u0442\\u0430\\u043a\\u043e\\u0433\\u043e \\u043a\\u043b\\u0430\\u0441\\u0441\\u0430 \\u043d\\u0435 \\u0441\\u0443\\u0449\\u0435\\u0441\\u0442\\u0432\\u0443\\u0435\\u0442\\n    $event = $modx->getObject(\'modPluginEvent\', array(\\n        \'pluginid\' => $modx->event->plugin->get(\'id\'),\\n        \'event\' => $modx->event->name,\\n    ));\\n    if ($event instanceof modPluginEvent) {\\n        $event->remove();\\n    }\\n}\\nreturn;","locked":0,"properties":null,"disabled":0,"moduleguid":"","static":0,"static_file":"core\\/components\\/msorderfiles\\/elements\\/plugins\\/plugin.system.php","content":"\\/** @var modX $modx *\\/\\n\\/** @var msOrderFiles $msof *\\/\\n\\n$path = MODX_CORE_PATH . \'components\\/msorderfiles\\/model\\/msorderfiles\\/\';\\nif (!is_object($modx->msorderfiles)) {\\n    $msof = $modx->getService(\'msorderfiles\', \'msOrderFiles\', $path);\\n} else {\\n    $msof = $modx->msorderfiles;\\n}\\n$className = \'msof\' . $modx->event->name;\\n$modx->loadClass(\'msofPlugin\', $msof->config[\'pluginsPath\'], true, true);\\n$modx->loadClass($className, $msof->config[\'pluginsPath\'], true, true);\\nif (class_exists($className)) {\\n    $handler = new $className($modx, $scriptProperties);\\n    $handler->run();\\n} else {\\n    \\/\\/ \\u0423\\u0434\\u0430\\u043b\\u044f\\u0435\\u043c \\u0441\\u043e\\u0431\\u044b\\u0442\\u0438\\u0435 \\u0443 \\u043f\\u043b\\u0430\\u0433\\u0438\\u043d\\u0430, \\u0435\\u0441\\u043b\\u0438 \\u0442\\u0430\\u043a\\u043e\\u0433\\u043e \\u043a\\u043b\\u0430\\u0441\\u0441\\u0430 \\u043d\\u0435 \\u0441\\u0443\\u0449\\u0435\\u0441\\u0442\\u0432\\u0443\\u0435\\u0442\\n    $event = $modx->getObject(\'modPluginEvent\', array(\\n        \'pluginid\' => $modx->event->plugin->get(\'id\'),\\n        \'event\' => $modx->event->name,\\n    ));\\n    if ($event instanceof modPluginEvent) {\\n        $event->remove();\\n    }\\n}\\nreturn;"}',
+        'guid' => '7ed77d693fce02001e457a7a888342c3',
+        'native_key' => NULL,
+        'signature' => '3f723adad4852b0389a6c828e18750e8',
+        'related_objects' => 
+        array (
+          'PluginEvents' => 
+          array (
+            'dc88070ddfc3e11e07363eb551ef8db3' => 
+            array (
+              'preserve_keys' => true,
+              'update_object' => true,
+              'unique_key' => 
+              array (
+                0 => 'pluginid',
+                1 => 'event',
+              ),
+              'class' => 'modPluginEvent',
+              'object' => '{"pluginid":0,"event":"OnMODXInit","priority":0,"propertyset":0}',
+              'guid' => '12fd9ae1e4a93eac12bbd23ac26fc69c',
+              'native_key' => 
+              array (
+                0 => 0,
+                1 => 'OnMODXInit',
+              ),
+              'signature' => '43d44b776e3ef4ea6f41d7e5cd1aa4de',
+            ),
+            'b7cfd91fd147f06424eeae2f09f35e7a' => 
+            array (
+              'preserve_keys' => true,
+              'update_object' => true,
+              'unique_key' => 
+              array (
+                0 => 'pluginid',
+                1 => 'event',
+              ),
+              'class' => 'modPluginEvent',
+              'object' => '{"pluginid":0,"event":"msOnCreateOrder","priority":0,"propertyset":0}',
+              'guid' => '0f70ce6472d571273bd9a36cb215601e',
+              'native_key' => 
+              array (
+                0 => 0,
+                1 => 'msOnCreateOrder',
+              ),
+              'signature' => 'fa9a45a05b2e1abb49cfba1a41739f2a',
+            ),
+            'b063110f8d3143cb403c97b0e947343a' => 
+            array (
+              'preserve_keys' => true,
+              'update_object' => true,
+              'unique_key' => 
+              array (
+                0 => 'pluginid',
+                1 => 'event',
+              ),
+              'class' => 'modPluginEvent',
+              'object' => '{"pluginid":0,"event":"msOnManagerCustomCssJs","priority":0,"propertyset":0}',
+              'guid' => 'ac8bbd7cc39c6f888bc6fb7eade0ba3a',
+              'native_key' => 
+              array (
+                0 => 0,
+                1 => 'msOnManagerCustomCssJs',
+              ),
+              'signature' => '4874304da05a0932937fa49ef8432108',
+            ),
+          ),
+        ),
+      ),
+    ),
+  ),
+  'related_object_attributes' => 
+  array (
+    'Snippets' => 
+    array (
+      'preserve_keys' => false,
+      'update_object' => true,
+      'unique_key' => 'name',
+    ),
+    'Chunks' => 
+    array (
+      'preserve_keys' => false,
+      'update_object' => true,
+      'unique_key' => 'name',
+    ),
+    'Plugins' => 
+    array (
+      'preserve_keys' => false,
+      'update_object' => true,
+      'unique_key' => 'name',
+    ),
+    'PluginEvents' => 
+    array (
+      'preserve_keys' => true,
+      'update_object' => true,
+      'unique_key' => 
+      array (
+        0 => 'pluginid',
+        1 => 'event',
+      ),
+    ),
+  ),
+  'namespace' => 'msorderfiles',
+  'resolve' => 
+  array (
+    0 => 
+    array (
+      'type' => 'file',
+      'body' => '{"source":"msorderfiles-1.1.5-beta2\\/modCategory\\/49d0b6b41bd3918dde8ea86453e433c3\\/0\\/","target":"return MODX_ASSETS_PATH . \'components\\/\';","name":"msorderfiles"}',
+    ),
+    1 => 
+    array (
+      'type' => 'file',
+      'body' => '{"source":"msorderfiles-1.1.5-beta2\\/modCategory\\/49d0b6b41bd3918dde8ea86453e433c3\\/1\\/","target":"return MODX_CORE_PATH . \'components\\/\';","name":"msorderfiles"}',
+    ),
+    2 => 
+    array (
+      'type' => 'php',
+      'body' => '{"source":"msorderfiles-1.1.5-beta2\\/modCategory\\/49d0b6b41bd3918dde8ea86453e433c3.resolve.tables.resolver","type":"php","name":"resolve.tables"}',
+    ),
+    3 => 
+    array (
+      'type' => 'php',
+      'body' => '{"source":"msorderfiles-1.1.5-beta2\\/modCategory\\/49d0b6b41bd3918dde8ea86453e433c3.resolve.sources.resolver","type":"php","name":"resolve.sources"}',
+    ),
+    4 => 
+    array (
+      'type' => 'php',
+      'body' => '{"source":"msorderfiles-1.1.5-beta2\\/modCategory\\/49d0b6b41bd3918dde8ea86453e433c3.resolve.policy.resolver","type":"php","name":"resolve.policy"}',
+    ),
+    5 => 
+    array (
+      'type' => 'php',
+      'body' => '{"source":"msorderfiles-1.1.5-beta2\\/modCategory\\/49d0b6b41bd3918dde8ea86453e433c3.resolve.chunks.resolver","type":"php","name":"resolve.chunks"}',
+    ),
+    6 => 
+    array (
+      'type' => 'php',
+      'body' => '{"source":"msorderfiles-1.1.5-beta2\\/modCategory\\/49d0b6b41bd3918dde8ea86453e433c3.resolve.ext.resolver","type":"php","name":"resolve.ext"}',
+    ),
+    7 => 
+    array (
+      'type' => 'php',
+      'body' => '{"source":"msorderfiles-1.1.5-beta2\\/modCategory\\/49d0b6b41bd3918dde8ea86453e433c3.resolve.vendors.resolver","type":"php","name":"resolve.vendors"}',
+    ),
+  ),
+  'validate' => NULL,
+  'vehicle_package' => 'transport',
+  'vehicle_class' => 'xPDOObjectVehicle',
+  'guid' => 'b8e94bfbb9c16c9b8ea4d5e87b43f175',
+  'package' => 'modx',
+  'class' => 'modCategory',
+  'signature' => '49d0b6b41bd3918dde8ea86453e433c3',
+  'native_key' => NULL,
+  'object' => '{"id":null,"parent":0,"category":"msOrderFiles","rank":0}',
+);

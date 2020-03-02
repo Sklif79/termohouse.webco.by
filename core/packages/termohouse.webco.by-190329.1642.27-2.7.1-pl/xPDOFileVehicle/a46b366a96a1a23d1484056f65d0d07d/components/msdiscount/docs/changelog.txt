@@ -1,0 +1,100 @@
+Changelog for msDiscount.
+
+1.3.2-pl
+==============
+- Fixed discount comparison if discount has %
+- Snippet msdGetDiscount copies logic of method getNewPrice
+
+1.3.1-pl
+==============
+- Fixed coupons logic.
+- Fixed the link to an orders from a coupons.
+
+1.3.0-pl
+==============
+- All coupons now applies only for products, not for a whole cart.
+- Added new system setting "msd_coupon_only_products" to override this behaviour.
+- System setting "msd_price_round" now affects to a coupons.
+
+1.2.5-pl
+==============
+- Improved logic of discounts.
+
+1.2.4-pl
+==============
+- Improved logic of discounts.
+- Fixed "msdSale_err_ns" error in manager.
+
+1.2.3-pl
+==============
+- Added system setting "msd_price_round" to round prices.
+
+1.2.2-pl
+==============
+- [msdBuyNow] Added "force_date" option.
+
+1.2.1-pl
+==============
+- Improved logic of discounts.
+
+1.2.0-pl
+==============
+- Improved logic of discounts.
+
+1.1.6-pl
+==============
+- Added ability to search by groups in sales window in the manager.
+
+1.1.5-pl
+==============
+- Fixed some ExtJS errors.
+
+1.1.4-pl
+==============
+- Fixed typos in "msdBuyNow".
+
+1.1.3-pl
+==============
+- Completely rewritten snippet "msdBuyNow".
+- New prepare snippet "msdGetSale" for msProducts.
+
+1.1.1-pl
+==============
+- Support of MS2 multi-categories.
+- Price after discount can`t be less that 0.
+- Added parameters &frontend_js and &frontend_css to snippet msdBuyNow.
+
+1.1.0-pl
+==============
+- Ability to add discounts for product category.
+- Disposable discount coupons.
+- Improved manager pages.
+
+1.0.5-pl
+==============
+- Added dependence from miniShop2 in the installer.
+
+1.0.4-pl
+==============
+- Compatibility with MODX 2.3.
+- Small UI fixes.
+
+1.0.3-pl
+==============
+- Added price formatting
+
+1.0.2-pl
+==============
+- Added Buy Now snippet.
+
+1.0.1-pl
+==============
+- Fixed comparison of percents.
+
+1.0.0-pl
+==============
+- Improved install script.
+
+1.0.0-beta
+==============
+- Initial release.

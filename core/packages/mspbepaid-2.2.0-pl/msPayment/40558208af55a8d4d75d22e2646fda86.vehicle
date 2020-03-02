@@ -1,0 +1,15 @@
+<?php return array (
+  'unique_key' => 'class',
+  'preserve_keys' => false,
+  'update_object' => false,
+  'resolve' => NULL,
+  'validate' => NULL,
+  'package' => 'minishop2',
+  'vehicle_package' => 'transport',
+  'vehicle_class' => 'xPDOObjectVehicle',
+  'guid' => 'd7764d438bf549596dcb3313d01b8d37',
+  'class' => 'msPayment',
+  'signature' => '40558208af55a8d4d75d22e2646fda86',
+  'native_key' => NULL,
+  'object' => '{"id":null,"name":"BePaid \\u2013 Default","description":null,"price":0,"logo":null,"rank":0,"active":0,"class":"BePaid","properties":null}',
+);

@@ -1,0 +1,289 @@
+<?php return array (
+  'unique_key' => 'category',
+  'preserve_keys' => false,
+  'update_object' => true,
+  'related_objects' => 
+  array (
+    'Chunks' => 
+    array (
+      'f74ac77d6b5e5f7b58e2122fa2c8c377' => 
+      array (
+        'preserve_keys' => false,
+        'update_object' => false,
+        'unique_key' => 'name',
+        'class' => 'modChunk',
+        'object' => '{"id":0,"source":1,"property_preprocess":0,"name":"tpl.msto.product.content","description":"","editor_type":0,"category":0,"cache_type":0,"snippet":"{var $msto = \'!msTradeOffers\' | snippet}\\n\\n<h1>[[*pagetitle]]<\\/h1>\\n<div id=\\"msProduct\\" class=\\"row\\">\\n    <div class=\\"col-md-6\\">\\n        <div id=\\"msto-gallery\\">\\n            {foreach $msto.gallery as $image}\\n                <img src=\\"{$image.thumb}\\" data-original=\\"{$image.original}\\" style=\\"width:100px;\\">\\n            {\\/foreach}\\n        <\\/div>\\n    <\\/div>\\n    <div class=\\"col-md-6\\">\\n        <form class=\\"form-horizontal ms2_form\\" method=\\"post\\">\\n            <input type=\\"hidden\\" name=\\"id\\" value=\\"[[*id]]\\"\\/>\\n\\n            {if $msto.article}\\n                <div class=\\"form-group\\">\\n                    <label class=\\"col-md-2 control-label\\">[[%ms2_product_article]]:<\\/label>\\n                    <div class=\\"col-md-10 form-control-static\\">\\n                        <span class=\\"msto-article\\">{$msto.article}<\\/span>\\n                    <\\/div>\\n                <\\/div>\\n            {\\/if}\\n\\n            {if $msto.colors}\\n                <div id=\\"msto-colors\\" class=\\"form-group\\">\\n                    {foreach $msto.colors as $k => $color}\\n                        <label>\\n                            <input type=\\"radio\\" value=\\"{$k}\\" name=\\"options[color]\\" {$color.active ? \'checked\' : \'\'}>\\n                            <span class=\\"{$color.active ? \'active\' : \'\'}\\">\\n                                <img src=\\"{$color.thumb}\\" width=\\"80px\\">\\n                                <span>{$k}<\\/span>\\n                            <\\/span>\\n                        <\\/label>\\n                    {\\/foreach}\\n                <\\/div>\\n            {\\/if}\\n\\n            {if $msto.sizes}\\n                <div id=\\"msto-sizes\\" class=\\"form-group\\">\\n                    {foreach $msto.sizes as $size}\\n                        <label>\\n                            <input type=\\"radio\\" value=\\"{$size.size}\\" name=\\"options[size]\\" {$size.active ? \'checked\' : \'\'}>\\n                            <span>{$size.size}<\\/span>\\n                        <\\/label>\\n                    {\\/foreach}\\n                <\\/div>\\n            {\\/if}\\n\\n            {if $msto.count}\\n                <div class=\\"form-group\\">\\n                    <label class=\\"col-md-2 control-label\\">\\u041e\\u0441\\u0442\\u0430\\u0442\\u043a\\u0438:<\\/label>\\n                    <div class=\\"col-md-10 form-control-static\\">\\n                        <span class=\\"msto-count\\">{$msto.count}<\\/span>\\n                    <\\/div>\\n                <\\/div>\\n            {\\/if}\\n\\n            <div class=\\"form-group\\">\\n                <label class=\\"col-md-2 control-label\\">[[%ms2_product_price]]:<\\/label>\\n                <div class=\\"col-md-10 form-control-static\\">\\n                    <span class=\\"msto-price\\">{$msto.price ?: $price}<\\/span> \\u0440\\u0443\\u0431.\\n                <\\/div>\\n            <\\/div>\\n\\n            <div class=\\"form-group form-inline\\">\\n                <label class=\\"col-md-2 control-label\\" for=\\"product_price\\">[[%ms2_cart_count]]:<\\/label>\\n                <div class=\\"col-md-10\\">\\n                    <input type=\\"number\\" name=\\"count\\" id=\\"product_price\\" class=\\"input-sm form-control\\" value=\\"1\\"\\/>\\n                    [[%ms2_frontend_count_unit]]\\n                <\\/div>\\n            <\\/div>\\n            {if $msto.weight}\\n                <div class=\\"form-group\\">\\n                    <label class=\\"col-md-2 control-label\\">[[%ms2_product_weight]]:<\\/label>\\n                    <div class=\\"col-md-10 form-control-static\\">\\n                        <span class=\\"msto-weight\\">{$msto.weight}<\\/span> [[%ms2_frontend_weight_unit]]\\n                    <\\/div>\\n                <\\/div>\\n            {\\/if}\\n            <div class=\\"form-group\\">\\n                <div class=\\"col-md-offset-2 col-md-10\\">\\n                    <button type=\\"submit\\" class=\\"btn btn-default\\" name=\\"ms2_action\\" value=\\"cart\\/add\\">\\n                        <i class=\\"glyphicon glyphicon-barcode\\"><\\/i> [[%ms2_frontend_add_to_cart]]\\n                    <\\/button>\\n                <\\/div>\\n            <\\/div>\\n        <\\/form>\\n\\n    <\\/div>\\n<\\/div>\\n[[*content]]","locked":0,"properties":null,"static":0,"static_file":"core\\/components\\/msto\\/elements\\/chunks\\/chunk.tpl.msto.product.content.tpl","content":"{var $msto = \'!msTradeOffers\' | snippet}\\n\\n<h1>[[*pagetitle]]<\\/h1>\\n<div id=\\"msProduct\\" class=\\"row\\">\\n    <div class=\\"col-md-6\\">\\n        <div id=\\"msto-gallery\\">\\n            {foreach $msto.gallery as $image}\\n                <img src=\\"{$image.thumb}\\" data-original=\\"{$image.original}\\" style=\\"width:100px;\\">\\n            {\\/foreach}\\n        <\\/div>\\n    <\\/div>\\n    <div class=\\"col-md-6\\">\\n        <form class=\\"form-horizontal ms2_form\\" method=\\"post\\">\\n            <input type=\\"hidden\\" name=\\"id\\" value=\\"[[*id]]\\"\\/>\\n\\n            {if $msto.article}\\n                <div class=\\"form-group\\">\\n                    <label class=\\"col-md-2 control-label\\">[[%ms2_product_article]]:<\\/label>\\n                    <div class=\\"col-md-10 form-control-static\\">\\n                        <span class=\\"msto-article\\">{$msto.article}<\\/span>\\n                    <\\/div>\\n                <\\/div>\\n            {\\/if}\\n\\n            {if $msto.colors}\\n                <div id=\\"msto-colors\\" class=\\"form-group\\">\\n                    {foreach $msto.colors as $k => $color}\\n                        <label>\\n                            <input type=\\"radio\\" value=\\"{$k}\\" name=\\"options[color]\\" {$color.active ? \'checked\' : \'\'}>\\n                            <span class=\\"{$color.active ? \'active\' : \'\'}\\">\\n                                <img src=\\"{$color.thumb}\\" width=\\"80px\\">\\n                                <span>{$k}<\\/span>\\n                            <\\/span>\\n                        <\\/label>\\n                    {\\/foreach}\\n                <\\/div>\\n            {\\/if}\\n\\n            {if $msto.sizes}\\n                <div id=\\"msto-sizes\\" class=\\"form-group\\">\\n                    {foreach $msto.sizes as $size}\\n                        <label>\\n                            <input type=\\"radio\\" value=\\"{$size.size}\\" name=\\"options[size]\\" {$size.active ? \'checked\' : \'\'}>\\n                            <span>{$size.size}<\\/span>\\n                        <\\/label>\\n                    {\\/foreach}\\n                <\\/div>\\n            {\\/if}\\n\\n            {if $msto.count}\\n                <div class=\\"form-group\\">\\n                    <label class=\\"col-md-2 control-label\\">\\u041e\\u0441\\u0442\\u0430\\u0442\\u043a\\u0438:<\\/label>\\n                    <div class=\\"col-md-10 form-control-static\\">\\n                        <span class=\\"msto-count\\">{$msto.count}<\\/span>\\n                    <\\/div>\\n                <\\/div>\\n            {\\/if}\\n\\n            <div class=\\"form-group\\">\\n                <label class=\\"col-md-2 control-label\\">[[%ms2_product_price]]:<\\/label>\\n                <div class=\\"col-md-10 form-control-static\\">\\n                    <span class=\\"msto-price\\">{$msto.price ?: $price}<\\/span> \\u0440\\u0443\\u0431.\\n                <\\/div>\\n            <\\/div>\\n\\n            <div class=\\"form-group form-inline\\">\\n                <label class=\\"col-md-2 control-label\\" for=\\"product_price\\">[[%ms2_cart_count]]:<\\/label>\\n                <div class=\\"col-md-10\\">\\n                    <input type=\\"number\\" name=\\"count\\" id=\\"product_price\\" class=\\"input-sm form-control\\" value=\\"1\\"\\/>\\n                    [[%ms2_frontend_count_unit]]\\n                <\\/div>\\n            <\\/div>\\n            {if $msto.weight}\\n                <div class=\\"form-group\\">\\n                    <label class=\\"col-md-2 control-label\\">[[%ms2_product_weight]]:<\\/label>\\n                    <div class=\\"col-md-10 form-control-static\\">\\n                        <span class=\\"msto-weight\\">{$msto.weight}<\\/span> [[%ms2_frontend_weight_unit]]\\n                    <\\/div>\\n                <\\/div>\\n            {\\/if}\\n            <div class=\\"form-group\\">\\n                <div class=\\"col-md-offset-2 col-md-10\\">\\n                    <button type=\\"submit\\" class=\\"btn btn-default\\" name=\\"ms2_action\\" value=\\"cart\\/add\\">\\n                        <i class=\\"glyphicon glyphicon-barcode\\"><\\/i> [[%ms2_frontend_add_to_cart]]\\n                    <\\/button>\\n                <\\/div>\\n            <\\/div>\\n        <\\/form>\\n\\n    <\\/div>\\n<\\/div>\\n[[*content]]"}',
+        'guid' => '99036df54fb2e775ef902adcfeb30bc6',
+        'native_key' => 0,
+        'signature' => '0041000f67f73dcf1a8785e7b7fa9553',
+      ),
+    ),
+    'Snippets' => 
+    array (
+      '2ffb13a3a9001fafbfe618b291ff6be5' => 
+      array (
+        'preserve_keys' => false,
+        'update_object' => true,
+        'unique_key' => 'name',
+        'class' => 'modSnippet',
+        'object' => '{"id":0,"source":1,"property_preprocess":0,"name":"msTradeOffers","description":"","editor_type":0,"category":0,"cache_type":0,"snippet":"$pdoFetch = $modx->getService(\'pdoFetch\');\\n$msto = $modx->getService(\'msto\', \'msto\', $modx->getOption(\'msto_core_path\', null, $modx->getOption(\'core_path\') . \'components\\/msto\\/\') . \'model\\/msto\\/\', $scriptProperties);\\n$msto->initialize(\'web\');\\n\\n$thumbnail_size = $modx->getOption(\'ms2_product_thumbnail_size\', null, \'120x90\');\\n$product_id = $modx->resource->id;\\n$article = $_REQUEST[\'sku\'];\\n\\n$q = $modx->prepare(\\"\\n    SELECT\\n        offer.id AS offer_id,\\n        offer.price,\\n        offer.article,\\n        offer.color,\\n        offer.size,\\n\\t\\toffer.weight,\\n        offer.count,\\n        product_Thumb.url AS thumb\\n    FROM (SELECT * FROM {$modx->getTableName(\'mstoOffer\')} ORDER BY CASE WHEN article = \'{$article}\' THEN 1 ELSE 2 END, price ASC) AS offer\\n    LEFT JOIN {$modx->getTableName(\'mstoOfferFile\')} AS offer_File ON offer_File.color = offer.color\\n    LEFT JOIN {$modx->getTableName(\'msProductFile\')} AS product_Thumb ON offer_File.image_id = product_Thumb.parent AND product_Thumb.path = \'{$product_id}\\/{$thumbnail_size}\\/\'\\n    WHERE offer.product_id = {$product_id} AND offer.active = 1\\n    GROUP BY offer.color\\n\\");\\nif(!$q->execute()) return;\\nif($offers = $q->fetchAll(PDO::FETCH_ASSOC)){\\n\\t$i = 0;\\n\\t\\/\\/ \\u0432\\u044b\\u0431\\u043e\\u0440 \\u0430\\u043a\\u0442\\u0438\\u0432\\u043d\\u043e\\u0433\\u043e \\u0442\\u043e\\u0432\\u0430\\u0440\\u0430 \\u043f\\u043e \\u0430\\u0440\\u0442\\u0438\\u043a\\u0443\\u043b\\u0443\\n\\tif($article) foreach($offers as $key => $_offer) if ($_offer[\'article\'] == $article) $i = $key;\\n\\n\\t$offer = array_merge($offers[$i], array(\\n\\t  \'sizes\' => array(),\\n\\t  \'colors\' => $colors,\\n\\t  \'gallery\' => array(),\\n\\t));\\n\\n\\tif(!$msto->config[\'show_weight\']) unset($offer[\'weight\']);\\n\\tif(!$msto->config[\'show_count\']) unset($offer[\'count\']);\\n\\n\\t\\/\\/ \\u0446\\u0432\\u0435\\u0442\\u0430\\n\\tforeach($offers as $index => $_offer){\\n\\t    $offer[\'colors\'][$_offer[\'color\']] = array(\\n\\t        \'thumb\' => $_offer[\'thumb\'],\\n\\t        \'active\' => $_offer[\'color\'] == $offer[\'color\'] ? true : false,\\n\\t    );\\n\\t}\\n\\n\\t\\/\\/ \\u0440\\u0430\\u0437\\u043c\\u0435\\u0440\\u044b\\n\\tif($msto->config[\'show_size\']){\\n\\t\\t$offers = $modx->getIterator(\'mstoOffer\', array(\\n\\t\\t    \'color\' => $offer[\'color\'],\\n\\t\\t    \'product_id\' => $modx->resource->id,\\n\\t\\t));\\n\\t\\tforeach($offers as $idx => $_offer){\\n\\t\\t    $offer[\'sizes\'][] = array(\\n\\t\\t        \'size\' => $_offer->size,\\n\\t\\t        \'price\' => $_offer->price,\\n\\t\\t        \'article\' => $_offer->article,\\n\\t\\t        \'active\' => $_offer->article == $offer[\'article\'] ? true : false,\\n\\t\\t    );\\n\\t\\t}\\n\\t}\\n\\n\\t\\/\\/ \\u0433\\u0430\\u043b\\u0435\\u0440\\u0435\\u044f\\n\\t$q = $modx->prepare(\\"\\n\\t    SELECT\\n\\t        product_File.url AS original,\\n\\t        product_Thumb.url AS thumb\\n\\t    FROM {$modx->getTableName(\'mstoOfferFile\')} AS offer_File\\n\\t    LEFT JOIN {$modx->getTableName(\'msProductFile\')} AS product_File ON offer_File.image_id = product_File.id\\n\\t    LEFT JOIN {$modx->getTableName(\'msProductFile\')} AS product_Thumb ON offer_File.image_id = product_Thumb.parent AND product_Thumb.path = \'{$product_id}\\/{$thumbnail_size}\\/\'\\n\\t    WHERE offer_File.product_id = {$modx->resource->id} AND offer_File.color = \'{$offer[color]}\'\\n\\t    ORDER BY product_File.rank ASC\\n\\t\\");\\n\\tif(!$q->execute()) return;\\n\\t$offer[\'gallery\'] = $q->fetchAll(PDO::FETCH_ASSOC);\\n}else{\\n\\t$product = $modx->getObject(\'msProduct\', $product_id);\\n\\t$offer = array(\\n\\t\\t\'article\' => $product->get(\'article\'),\\n\\t\\t\'weight\' =>  $msto->config[\'show_weight\'] ? $product->get(\'weight\') : \'\',\\n\\t);\\n}\\n\\nif(empty($offer[\'gallery\'])){\\n\\t$q = $modx->prepare(\\"\\n    \\t\\tSELECT\\n\\t\\t\\tproduct_Thumb.url AS thumb,\\n\\t\\t\\tproduct_File.url AS original\\n\\t\\tFROM {$modx->getTableName(\'msProductFile\')} AS product_Thumb\\n\\t\\t LEFT JOIN {$modx->getTableName(\'msProductFile\')} AS product_File ON product_File.id = product_Thumb.parent\\n\\t\\tWHERE product_Thumb.product_id = \'{$product_id}\' AND product_Thumb.path = \'{$product_id}\\/{$thumbnail_size}\\/\'\\n\\t\\");\\n\\tif(!$q->execute()) return;\\n\\t$offer[\'gallery\'] = $q->fetchAll(PDO::FETCH_ASSOC);\\n}\\n\\nreturn $offer;","locked":0,"properties":"a:0:{}","moduleguid":"","static":0,"static_file":"core\\/components\\/msto\\/elements\\/snippets\\/snippet.msTradeOffers.php","content":"$pdoFetch = $modx->getService(\'pdoFetch\');\\n$msto = $modx->getService(\'msto\', \'msto\', $modx->getOption(\'msto_core_path\', null, $modx->getOption(\'core_path\') . \'components\\/msto\\/\') . \'model\\/msto\\/\', $scriptProperties);\\n$msto->initialize(\'web\');\\n\\n$thumbnail_size = $modx->getOption(\'ms2_product_thumbnail_size\', null, \'120x90\');\\n$product_id = $modx->resource->id;\\n$article = $_REQUEST[\'sku\'];\\n\\n$q = $modx->prepare(\\"\\n    SELECT\\n        offer.id AS offer_id,\\n        offer.price,\\n        offer.article,\\n        offer.color,\\n        offer.size,\\n\\t\\toffer.weight,\\n        offer.count,\\n        product_Thumb.url AS thumb\\n    FROM (SELECT * FROM {$modx->getTableName(\'mstoOffer\')} ORDER BY CASE WHEN article = \'{$article}\' THEN 1 ELSE 2 END, price ASC) AS offer\\n    LEFT JOIN {$modx->getTableName(\'mstoOfferFile\')} AS offer_File ON offer_File.color = offer.color\\n    LEFT JOIN {$modx->getTableName(\'msProductFile\')} AS product_Thumb ON offer_File.image_id = product_Thumb.parent AND product_Thumb.path = \'{$product_id}\\/{$thumbnail_size}\\/\'\\n    WHERE offer.product_id = {$product_id} AND offer.active = 1\\n    GROUP BY offer.color\\n\\");\\nif(!$q->execute()) return;\\nif($offers = $q->fetchAll(PDO::FETCH_ASSOC)){\\n\\t$i = 0;\\n\\t\\/\\/ \\u0432\\u044b\\u0431\\u043e\\u0440 \\u0430\\u043a\\u0442\\u0438\\u0432\\u043d\\u043e\\u0433\\u043e \\u0442\\u043e\\u0432\\u0430\\u0440\\u0430 \\u043f\\u043e \\u0430\\u0440\\u0442\\u0438\\u043a\\u0443\\u043b\\u0443\\n\\tif($article) foreach($offers as $key => $_offer) if ($_offer[\'article\'] == $article) $i = $key;\\n\\n\\t$offer = array_merge($offers[$i], array(\\n\\t  \'sizes\' => array(),\\n\\t  \'colors\' => $colors,\\n\\t  \'gallery\' => array(),\\n\\t));\\n\\n\\tif(!$msto->config[\'show_weight\']) unset($offer[\'weight\']);\\n\\tif(!$msto->config[\'show_count\']) unset($offer[\'count\']);\\n\\n\\t\\/\\/ \\u0446\\u0432\\u0435\\u0442\\u0430\\n\\tforeach($offers as $index => $_offer){\\n\\t    $offer[\'colors\'][$_offer[\'color\']] = array(\\n\\t        \'thumb\' => $_offer[\'thumb\'],\\n\\t        \'active\' => $_offer[\'color\'] == $offer[\'color\'] ? true : false,\\n\\t    );\\n\\t}\\n\\n\\t\\/\\/ \\u0440\\u0430\\u0437\\u043c\\u0435\\u0440\\u044b\\n\\tif($msto->config[\'show_size\']){\\n\\t\\t$offers = $modx->getIterator(\'mstoOffer\', array(\\n\\t\\t    \'color\' => $offer[\'color\'],\\n\\t\\t    \'product_id\' => $modx->resource->id,\\n\\t\\t));\\n\\t\\tforeach($offers as $idx => $_offer){\\n\\t\\t    $offer[\'sizes\'][] = array(\\n\\t\\t        \'size\' => $_offer->size,\\n\\t\\t        \'price\' => $_offer->price,\\n\\t\\t        \'article\' => $_offer->article,\\n\\t\\t        \'active\' => $_offer->article == $offer[\'article\'] ? true : false,\\n\\t\\t    );\\n\\t\\t}\\n\\t}\\n\\n\\t\\/\\/ \\u0433\\u0430\\u043b\\u0435\\u0440\\u0435\\u044f\\n\\t$q = $modx->prepare(\\"\\n\\t    SELECT\\n\\t        product_File.url AS original,\\n\\t        product_Thumb.url AS thumb\\n\\t    FROM {$modx->getTableName(\'mstoOfferFile\')} AS offer_File\\n\\t    LEFT JOIN {$modx->getTableName(\'msProductFile\')} AS product_File ON offer_File.image_id = product_File.id\\n\\t    LEFT JOIN {$modx->getTableName(\'msProductFile\')} AS product_Thumb ON offer_File.image_id = product_Thumb.parent AND product_Thumb.path = \'{$product_id}\\/{$thumbnail_size}\\/\'\\n\\t    WHERE offer_File.product_id = {$modx->resource->id} AND offer_File.color = \'{$offer[color]}\'\\n\\t    ORDER BY product_File.rank ASC\\n\\t\\");\\n\\tif(!$q->execute()) return;\\n\\t$offer[\'gallery\'] = $q->fetchAll(PDO::FETCH_ASSOC);\\n}else{\\n\\t$product = $modx->getObject(\'msProduct\', $product_id);\\n\\t$offer = array(\\n\\t\\t\'article\' => $product->get(\'article\'),\\n\\t\\t\'weight\' =>  $msto->config[\'show_weight\'] ? $product->get(\'weight\') : \'\',\\n\\t);\\n}\\n\\nif(empty($offer[\'gallery\'])){\\n\\t$q = $modx->prepare(\\"\\n    \\t\\tSELECT\\n\\t\\t\\tproduct_Thumb.url AS thumb,\\n\\t\\t\\tproduct_File.url AS original\\n\\t\\tFROM {$modx->getTableName(\'msProductFile\')} AS product_Thumb\\n\\t\\t LEFT JOIN {$modx->getTableName(\'msProductFile\')} AS product_File ON product_File.id = product_Thumb.parent\\n\\t\\tWHERE product_Thumb.product_id = \'{$product_id}\' AND product_Thumb.path = \'{$product_id}\\/{$thumbnail_size}\\/\'\\n\\t\\");\\n\\tif(!$q->execute()) return;\\n\\t$offer[\'gallery\'] = $q->fetchAll(PDO::FETCH_ASSOC);\\n}\\n\\nreturn $offer;"}',
+        'guid' => 'd757951dcec3aac39b74f0eb4c5662a4',
+        'native_key' => 0,
+        'signature' => 'a83b6b77113271b68121b683aabeb103',
+      ),
+    ),
+    'Plugins' => 
+    array (
+      '7567dea0d930332844e0a5dbfac11d3e' => 
+      array (
+        'preserve_keys' => false,
+        'update_object' => true,
+        'unique_key' => 'name',
+        'class' => 'modPlugin',
+        'object' => '{"id":null,"source":1,"property_preprocess":0,"name":"msTradeOffers","description":"","editor_type":0,"category":0,"cache_type":0,"plugincode":"$msto = $modx->getService(\'msto\', \'msto\', $modx->getOption(\'msto_core_path\', null, $modx->getOption(\'core_path\') . \'components\\/msto\\/\') . \'model\\/msto\\/\', $scriptProperties);\\nif (!($msto instanceof msto)) return \'\';\\n\\n$eventName = $modx->event->name;\\nif (method_exists($msto, $eventName) && $msto->active) {\\n\\t$msto->$eventName($scriptProperties, $product);\\n}\\n\\nswitch($modx->event->name){\\n    case \'msOnAddToCart\':\\n\\t\\t$tmp = $cart->get();\\n\\t\\t$product_id = $tmp[$key][\'id\'];\\n\\n\\t\\t$color = $tmp[$key][\'options\'][\'color\'];\\n\\t\\tif(!$color) return;\\n\\t\\t$thumbnail_size = $modx->getOption(\'ms2_product_thumbnail_size\', null, \'120x90\');\\n\\n\\t\\t$offer = $modx->getObject(\'mstoOffer\' ,array(\\n\\t\\t\\t\'product_id\' => $product_id,\\n\\t\\t\\t\'color\' => $color,\\n\\t\\t\\t\'size\' => $tmp[$key][\'options\'][\'size\'],\\n\\t\\t));\\n\\t\\tif($offer){\\n\\t\\t\\t$tmp[$key][\'price\'] = $offer->price * $tmp[$key][\'count\'];\\n\\t\\t\\t$tmp[$key][\'options\'][\'article\'] = $offer->article;\\n\\t\\t}\\n\\n\\t\\t$q = $modx->prepare(\\"\\n\\t\\t    SELECT\\n\\t\\t        product_File.url AS original,\\n\\t\\t        product_Thumb.url AS thumb\\n\\t\\t    FROM {$modx->getTableName(\'mstoOfferFile\')} AS offer_File\\n\\t\\t    LEFT JOIN {$modx->getTableName(\'msProductFile\')} AS product_File ON offer_File.image_id = product_File.id\\n\\t\\t    LEFT JOIN {$modx->getTableName(\'msProductFile\')} AS product_Thumb ON offer_File.image_id = product_Thumb.parent AND product_Thumb.path = \'{$product_id}\\/{$thumbnail_size}\\/\'\\n\\t\\t    WHERE offer_File.product_id = {$product_id} AND offer_File.color = \'{$color}\'\\n\\t\\t    ORDER BY product_File.rank ASC\\n\\t\\t\\tLIMIT 1\\n\\t\\t\\");\\n\\t\\tif(!$q->execute() || !$image = $q->fetch(PDO::FETCH_ASSOC)) return;\\n\\t\\t$tmp[$key][\'options\'][\'thumb\'] = $image[\'thumb\'];\\n\\n\\t\\t$cart->set($tmp);\\n\\t\\tbreak;\\n\\n\\tcase \'msOnChangeOrderStatus\':\\n\\t\\tif(!$modx->getOption(\'msto_show_count\', null, false)) return;\\n\\t\\tif(empty($status) || $status == 1 || $status == 3) return;\\n\\t\\t$products = $order->getMany(\'Products\');\\n\\t\\tforeach($products as $product){\\n\\t\\t\\t$options = $product->get(\'options\');\\n\\t\\t\\t$offer = $modx->getObject(\'mstoOffer\', array(\\n\\t\\t\\t\\t\'product_id\' => $product->id,\\n\\t\\t\\t\\t\'color\' => $options[\'color\'],\\n\\t\\t\\t\\t\'size\' => $options[\'size\'],\\n\\t\\t\\t));\\n\\t\\t\\tif($offer){\\n\\t\\t\\t\\tif($status == 2){\\n\\t\\t\\t\\t\\t$offer->set(\'count\', $offer->count - $product->count);\\n\\t\\t\\t\\t}else if($status == 4){\\n\\t\\t\\t\\t\\t$offer->set(\'count\', $offer->count + $product->count);\\n\\t\\t\\t\\t}\\n\\t\\t\\t\\t$offer->save();\\n\\t\\t\\t}\\n\\t\\t}\\n\\t\\tbreak;\\n\\n    case \'mstoOnCreateOffer\':\\n    case \'mstoOnUpdateOffer\':\\n\\t\\t\\/\\/ min price from offers, $offer\\n        $offers = $modx->getIterator(\'mstoOffer\', array(\'product_id\' => $offer->get(\'product_id\')));\\n\\t\\tif(!$offers) return;\\n\\t\\tforeach($offers as $_offer) $_price[] = $_offer->get(\'price\');\\n\\t\\tsort($_price);\\n\\t\\t$product = $modx->getObject(\'msProduct\', $offer->get(\'product_id\'));\\n\\t\\t$product->set(\'price\', $_price[0]);\\n\\t\\t$product->save();\\n\\t\\tbreak;\\n}","locked":0,"properties":null,"disabled":0,"moduleguid":"","static":0,"static_file":"core\\/components\\/msto\\/elements\\/plugins\\/plugin.msTradeOffers.php","content":"$msto = $modx->getService(\'msto\', \'msto\', $modx->getOption(\'msto_core_path\', null, $modx->getOption(\'core_path\') . \'components\\/msto\\/\') . \'model\\/msto\\/\', $scriptProperties);\\nif (!($msto instanceof msto)) return \'\';\\n\\n$eventName = $modx->event->name;\\nif (method_exists($msto, $eventName) && $msto->active) {\\n\\t$msto->$eventName($scriptProperties, $product);\\n}\\n\\nswitch($modx->event->name){\\n    case \'msOnAddToCart\':\\n\\t\\t$tmp = $cart->get();\\n\\t\\t$product_id = $tmp[$key][\'id\'];\\n\\n\\t\\t$color = $tmp[$key][\'options\'][\'color\'];\\n\\t\\tif(!$color) return;\\n\\t\\t$thumbnail_size = $modx->getOption(\'ms2_product_thumbnail_size\', null, \'120x90\');\\n\\n\\t\\t$offer = $modx->getObject(\'mstoOffer\' ,array(\\n\\t\\t\\t\'product_id\' => $product_id,\\n\\t\\t\\t\'color\' => $color,\\n\\t\\t\\t\'size\' => $tmp[$key][\'options\'][\'size\'],\\n\\t\\t));\\n\\t\\tif($offer){\\n\\t\\t\\t$tmp[$key][\'price\'] = $offer->price * $tmp[$key][\'count\'];\\n\\t\\t\\t$tmp[$key][\'options\'][\'article\'] = $offer->article;\\n\\t\\t}\\n\\n\\t\\t$q = $modx->prepare(\\"\\n\\t\\t    SELECT\\n\\t\\t        product_File.url AS original,\\n\\t\\t        product_Thumb.url AS thumb\\n\\t\\t    FROM {$modx->getTableName(\'mstoOfferFile\')} AS offer_File\\n\\t\\t    LEFT JOIN {$modx->getTableName(\'msProductFile\')} AS product_File ON offer_File.image_id = product_File.id\\n\\t\\t    LEFT JOIN {$modx->getTableName(\'msProductFile\')} AS product_Thumb ON offer_File.image_id = product_Thumb.parent AND product_Thumb.path = \'{$product_id}\\/{$thumbnail_size}\\/\'\\n\\t\\t    WHERE offer_File.product_id = {$product_id} AND offer_File.color = \'{$color}\'\\n\\t\\t    ORDER BY product_File.rank ASC\\n\\t\\t\\tLIMIT 1\\n\\t\\t\\");\\n\\t\\tif(!$q->execute() || !$image = $q->fetch(PDO::FETCH_ASSOC)) return;\\n\\t\\t$tmp[$key][\'options\'][\'thumb\'] = $image[\'thumb\'];\\n\\n\\t\\t$cart->set($tmp);\\n\\t\\tbreak;\\n\\n\\tcase \'msOnChangeOrderStatus\':\\n\\t\\tif(!$modx->getOption(\'msto_show_count\', null, false)) return;\\n\\t\\tif(empty($status) || $status == 1 || $status == 3) return;\\n\\t\\t$products = $order->getMany(\'Products\');\\n\\t\\tforeach($products as $product){\\n\\t\\t\\t$options = $product->get(\'options\');\\n\\t\\t\\t$offer = $modx->getObject(\'mstoOffer\', array(\\n\\t\\t\\t\\t\'product_id\' => $product->id,\\n\\t\\t\\t\\t\'color\' => $options[\'color\'],\\n\\t\\t\\t\\t\'size\' => $options[\'size\'],\\n\\t\\t\\t));\\n\\t\\t\\tif($offer){\\n\\t\\t\\t\\tif($status == 2){\\n\\t\\t\\t\\t\\t$offer->set(\'count\', $offer->count - $product->count);\\n\\t\\t\\t\\t}else if($status == 4){\\n\\t\\t\\t\\t\\t$offer->set(\'count\', $offer->count + $product->count);\\n\\t\\t\\t\\t}\\n\\t\\t\\t\\t$offer->save();\\n\\t\\t\\t}\\n\\t\\t}\\n\\t\\tbreak;\\n\\n    case \'mstoOnCreateOffer\':\\n    case \'mstoOnUpdateOffer\':\\n\\t\\t\\/\\/ min price from offers, $offer\\n        $offers = $modx->getIterator(\'mstoOffer\', array(\'product_id\' => $offer->get(\'product_id\')));\\n\\t\\tif(!$offers) return;\\n\\t\\tforeach($offers as $_offer) $_price[] = $_offer->get(\'price\');\\n\\t\\tsort($_price);\\n\\t\\t$product = $modx->getObject(\'msProduct\', $offer->get(\'product_id\'));\\n\\t\\t$product->set(\'price\', $_price[0]);\\n\\t\\t$product->save();\\n\\t\\tbreak;\\n}"}',
+        'guid' => '9dff6bf20adc3f9469961abf08f0da1c',
+        'native_key' => NULL,
+        'signature' => '277780da9992422b90b31dfe5e8bc4e1',
+        'related_objects' => 
+        array (
+          'PluginEvents' => 
+          array (
+            'de5f8c588b41769192e2e875c88ddb6e' => 
+            array (
+              'preserve_keys' => true,
+              'update_object' => true,
+              'unique_key' => 
+              array (
+                0 => 'pluginid',
+                1 => 'event',
+              ),
+              'class' => 'modPluginEvent',
+              'object' => '{"pluginid":0,"event":"OnDocFormPrerender","priority":0,"propertyset":0}',
+              'guid' => '66da988cc107e76296c462ab6d01f580',
+              'native_key' => 
+              array (
+                0 => 0,
+                1 => 'OnDocFormPrerender',
+              ),
+              'signature' => '9e86ff91554e92818b9fe791d05d5ba3',
+            ),
+            '1ce01cb73e5d830562c592037ff832c6' => 
+            array (
+              'preserve_keys' => true,
+              'update_object' => true,
+              'unique_key' => 
+              array (
+                0 => 'pluginid',
+                1 => 'event',
+              ),
+              'class' => 'modPluginEvent',
+              'object' => '{"pluginid":0,"event":"msOnAddToCart","priority":0,"propertyset":0}',
+              'guid' => 'c6870950d174af37f2160c71754fccdd',
+              'native_key' => 
+              array (
+                0 => 0,
+                1 => 'msOnAddToCart',
+              ),
+              'signature' => '8c2997b329297f5a936235e4bb588792',
+            ),
+            '6054599f74a9ffb22189608e4086254b' => 
+            array (
+              'preserve_keys' => true,
+              'update_object' => true,
+              'unique_key' => 
+              array (
+                0 => 'pluginid',
+                1 => 'event',
+              ),
+              'class' => 'modPluginEvent',
+              'object' => '{"pluginid":0,"event":"mstoOnCreateOffer","priority":0,"propertyset":0}',
+              'guid' => 'f7f3575a28a29b3860b2115847a6edc1',
+              'native_key' => 
+              array (
+                0 => 0,
+                1 => 'mstoOnCreateOffer',
+              ),
+              'signature' => 'd1523cbda302772dd42eda424377ee5a',
+            ),
+            'f423eff9c8024265f637a5138ba79fc2' => 
+            array (
+              'preserve_keys' => true,
+              'update_object' => true,
+              'unique_key' => 
+              array (
+                0 => 'pluginid',
+                1 => 'event',
+              ),
+              'class' => 'modPluginEvent',
+              'object' => '{"pluginid":0,"event":"mstoOnUpdateOffer","priority":0,"propertyset":0}',
+              'guid' => '2d3a90b9c7e496e6cd56d305e2e9b6d6',
+              'native_key' => 
+              array (
+                0 => 0,
+                1 => 'mstoOnUpdateOffer',
+              ),
+              'signature' => 'd5926d7ca51a2ba5813cf7e85f9b0435',
+            ),
+          ),
+        ),
+      ),
+      '6047ea1e1a0dbecf7f54ef56c54fb6d6' => 
+      array (
+        'preserve_keys' => false,
+        'update_object' => true,
+        'unique_key' => 'name',
+        'class' => 'modPlugin',
+        'object' => '{"id":null,"source":1,"property_preprocess":0,"name":"msTradeOffersRemains","description":"","editor_type":0,"category":0,"cache_type":0,"plugincode":"\\/* $msto = $modx->getService(\'msto\', \'msto\', $modx->getOption(\'msto_core_path\', null, $modx->getOption(\'core_path\') . \'components\\/msto\\/\') . \'model\\/msto\\/\', $scriptProperties);\\nif (!($msto instanceof msto)) return \'\';\\n$modx->lexicon->load(\'msto:manager\');\\n\\n\\nreturn;\\n\\n\\nswitch ($modx->event->name) {\\n\\n\\tcase \'msOnBeforeAddToCart\':\\n\\t\\tif(empty($count) || $options ==\'[]\') return;\\n\\t\\t$id = $product->get(\'id\');\\n\\t\\t$_count = $msto->getOfferOption(\'count\', $product->get(\'id\'), $options);\\n\\t\\tif($count > $_count){\\n\\t\\t\\t$modx->event->output($modx->lexicon(\'msto_available_count\') . $_count . $modx->lexicon(\'msto_pieces\'));\\n\\t\\t}\\n\\t\\tbreak;\\n\\n\\n\\tcase \'msOnBeforeChangeInCart\':\\n\\t\\tif (empty($count)) return;\\n\\t\\tif ($cart_items = $cart->get()) {\\n\\t\\t\\tif(!empty($cart_items[$key])) {\\n\\t\\t\\t\\tif($cart_items[$key][\'options\'] ==\'[]\') return;\\n\\t\\t\\t\\t$id = $cart_items[$key][\'id\'];\\n\\t\\t\\t\\t$_count = $msto->getOfferOption(\'count\', $id, $cart_items[$key][\'options\']);\\n\\t\\t\\t\\tif($count > $_count){\\n\\t\\t\\t\\t\\t$modx->event->output($modx->lexicon(\'msto_available_count_no\'));\\n\\t\\t\\t\\t}\\n\\t\\t\\t}\\n\\t\\t}\\n\\t\\tbreak;\\n\\n\\tcase \'msOnCreateOrder\':\\n\\t\\tif(!$products = $msOrder->getMany(\'Products\')) return;\\n\\t\\tforeach($products as $product) {\\n\\t\\t\\t$product_id = $product->get(\'product_id\');\\n\\t\\t\\t$options = $product->get(\'options\');\\n\\t\\t\\t$count = $product->get(\'count\');\\n\\t\\t\\tif(!$options[\'color\'] || !$options[\'size\']) continue;\\n\\t\\t\\t$arr[\'count\'][$product_id][] = array(\\n\\t\\t\\t\\t\'color\' => $options[\'color\'],\\n\\t\\t\\t\\t\'size\' => $options[\'size\'],\\n\\t\\t\\t\\t\'count\' => $count\\n\\t\\t\\t);\\n\\t\\t}\\n\\n\\t\\t$msOrder->set(\'properties\', $modx->toJSON($arr));\\n\\t\\t$msOrder->save();\\n\\t\\tbreak;\\n\\n\\n\\n\\tcase \'msOnChangeOrderStatus\':\\n\\t\\tif(empty($status) || $status == 1 || $status == 3) return;\\n\\t\\t$arr = $order->get(\'properties\');\\n\\t\\tif(empty($arr)) return;\\n\\t\\tforeach($arr as $a){\\n\\t\\t\\tforeach($a as $id => $c){\\n\\t\\t\\t\\tforeach($c as $d => $value){\\n\\t\\t\\t\\t\\t$offer = $modx->getObject(\'mstoOffer\', array(\'product_id\' => $id, \'color\' => $value[\'color\'], \'size\' => $value[\'size\']));\\n\\t\\t\\t\\t\\t$count = $offer->get(\'count\');\\n\\n\\t\\t\\t\\t\\tif($status == 2){\\n\\t\\t\\t\\t\\t\\t$offer->set(\'count\', $count - $value[\'count\']);\\n\\t\\t\\t\\t\\t}else if($status == 4){\\n\\t\\t\\t\\t\\t\\t$offer->set(\'count\', $count + $value[\'count\']);\\n\\t\\t\\t\\t\\t}\\n\\n\\t\\t\\t\\t\\t$offer->save();\\n\\t\\t\\t\\t}\\n\\t\\t\\t}\\n\\t\\t}\\n\\t\\tbreak;\\n\\n}\\n*\\/","locked":0,"properties":null,"disabled":0,"moduleguid":"","static":0,"static_file":"core\\/components\\/msto\\/elements\\/plugins\\/plugin.msTradeOffersRemains.php","content":"\\/* $msto = $modx->getService(\'msto\', \'msto\', $modx->getOption(\'msto_core_path\', null, $modx->getOption(\'core_path\') . \'components\\/msto\\/\') . \'model\\/msto\\/\', $scriptProperties);\\nif (!($msto instanceof msto)) return \'\';\\n$modx->lexicon->load(\'msto:manager\');\\n\\n\\nreturn;\\n\\n\\nswitch ($modx->event->name) {\\n\\n\\tcase \'msOnBeforeAddToCart\':\\n\\t\\tif(empty($count) || $options ==\'[]\') return;\\n\\t\\t$id = $product->get(\'id\');\\n\\t\\t$_count = $msto->getOfferOption(\'count\', $product->get(\'id\'), $options);\\n\\t\\tif($count > $_count){\\n\\t\\t\\t$modx->event->output($modx->lexicon(\'msto_available_count\') . $_count . $modx->lexicon(\'msto_pieces\'));\\n\\t\\t}\\n\\t\\tbreak;\\n\\n\\n\\tcase \'msOnBeforeChangeInCart\':\\n\\t\\tif (empty($count)) return;\\n\\t\\tif ($cart_items = $cart->get()) {\\n\\t\\t\\tif(!empty($cart_items[$key])) {\\n\\t\\t\\t\\tif($cart_items[$key][\'options\'] ==\'[]\') return;\\n\\t\\t\\t\\t$id = $cart_items[$key][\'id\'];\\n\\t\\t\\t\\t$_count = $msto->getOfferOption(\'count\', $id, $cart_items[$key][\'options\']);\\n\\t\\t\\t\\tif($count > $_count){\\n\\t\\t\\t\\t\\t$modx->event->output($modx->lexicon(\'msto_available_count_no\'));\\n\\t\\t\\t\\t}\\n\\t\\t\\t}\\n\\t\\t}\\n\\t\\tbreak;\\n\\n\\tcase \'msOnCreateOrder\':\\n\\t\\tif(!$products = $msOrder->getMany(\'Products\')) return;\\n\\t\\tforeach($products as $product) {\\n\\t\\t\\t$product_id = $product->get(\'product_id\');\\n\\t\\t\\t$options = $product->get(\'options\');\\n\\t\\t\\t$count = $product->get(\'count\');\\n\\t\\t\\tif(!$options[\'color\'] || !$options[\'size\']) continue;\\n\\t\\t\\t$arr[\'count\'][$product_id][] = array(\\n\\t\\t\\t\\t\'color\' => $options[\'color\'],\\n\\t\\t\\t\\t\'size\' => $options[\'size\'],\\n\\t\\t\\t\\t\'count\' => $count\\n\\t\\t\\t);\\n\\t\\t}\\n\\n\\t\\t$msOrder->set(\'properties\', $modx->toJSON($arr));\\n\\t\\t$msOrder->save();\\n\\t\\tbreak;\\n\\n\\n\\n\\tcase \'msOnChangeOrderStatus\':\\n\\t\\tif(empty($status) || $status == 1 || $status == 3) return;\\n\\t\\t$arr = $order->get(\'properties\');\\n\\t\\tif(empty($arr)) return;\\n\\t\\tforeach($arr as $a){\\n\\t\\t\\tforeach($a as $id => $c){\\n\\t\\t\\t\\tforeach($c as $d => $value){\\n\\t\\t\\t\\t\\t$offer = $modx->getObject(\'mstoOffer\', array(\'product_id\' => $id, \'color\' => $value[\'color\'], \'size\' => $value[\'size\']));\\n\\t\\t\\t\\t\\t$count = $offer->get(\'count\');\\n\\n\\t\\t\\t\\t\\tif($status == 2){\\n\\t\\t\\t\\t\\t\\t$offer->set(\'count\', $count - $value[\'count\']);\\n\\t\\t\\t\\t\\t}else if($status == 4){\\n\\t\\t\\t\\t\\t\\t$offer->set(\'count\', $count + $value[\'count\']);\\n\\t\\t\\t\\t\\t}\\n\\n\\t\\t\\t\\t\\t$offer->save();\\n\\t\\t\\t\\t}\\n\\t\\t\\t}\\n\\t\\t}\\n\\t\\tbreak;\\n\\n}\\n*\\/"}',
+        'guid' => '67ceeabc3ae0eadb1d5959e37bc2c697',
+        'native_key' => NULL,
+        'signature' => '268d1feb6fea66910d59c1123ea5d557',
+        'related_objects' => 
+        array (
+          'PluginEvents' => 
+          array (
+            '7063d138b887036efa49ba486782718e' => 
+            array (
+              'preserve_keys' => true,
+              'update_object' => true,
+              'unique_key' => 
+              array (
+                0 => 'pluginid',
+                1 => 'event',
+              ),
+              'class' => 'modPluginEvent',
+              'object' => '{"pluginid":0,"event":"msOnBeforeAddToCart","priority":0,"propertyset":0}',
+              'guid' => '2aa6a8cc4375770cc42815c4c6c08062',
+              'native_key' => 
+              array (
+                0 => 0,
+                1 => 'msOnBeforeAddToCart',
+              ),
+              'signature' => 'a0b1bd869f6e8200a8a44ccb931615bf',
+            ),
+            'f30ea9a246661cb277393fe801ed4f65' => 
+            array (
+              'preserve_keys' => true,
+              'update_object' => true,
+              'unique_key' => 
+              array (
+                0 => 'pluginid',
+                1 => 'event',
+              ),
+              'class' => 'modPluginEvent',
+              'object' => '{"pluginid":0,"event":"msOnBeforeChangeInCart","priority":0,"propertyset":0}',
+              'guid' => '86053626bcb83538ea4265125b60aff5',
+              'native_key' => 
+              array (
+                0 => 0,
+                1 => 'msOnBeforeChangeInCart',
+              ),
+              'signature' => 'a6ee1fc5f485fa77294ee6e72f843900',
+            ),
+            '9b536fefe196d7b850531f59c1e79853' => 
+            array (
+              'preserve_keys' => true,
+              'update_object' => true,
+              'unique_key' => 
+              array (
+                0 => 'pluginid',
+                1 => 'event',
+              ),
+              'class' => 'modPluginEvent',
+              'object' => '{"pluginid":0,"event":"msOnCreateOrder","priority":0,"propertyset":0}',
+              'guid' => 'af8140e8aa7267473f3cc8ea87e6d003',
+              'native_key' => 
+              array (
+                0 => 0,
+                1 => 'msOnCreateOrder',
+              ),
+              'signature' => '6fda9bc518ece3d674eed26368b9ff71',
+            ),
+            'cb6cfd71e7e9ca52f6a5b0f5b89d97af' => 
+            array (
+              'preserve_keys' => true,
+              'update_object' => true,
+              'unique_key' => 
+              array (
+                0 => 'pluginid',
+                1 => 'event',
+              ),
+              'class' => 'modPluginEvent',
+              'object' => '{"pluginid":0,"event":"msOnChangeOrderStatus","priority":0,"propertyset":0}',
+              'guid' => '1c55bf621c03b5f7cd8d92df241b965b',
+              'native_key' => 
+              array (
+                0 => 0,
+                1 => 'msOnChangeOrderStatus',
+              ),
+              'signature' => '00601af1d669b7cecdae4b8db40ad51f',
+            ),
+          ),
+        ),
+      ),
+    ),
+  ),
+  'related_object_attributes' => 
+  array (
+    'Snippets' => 
+    array (
+      'preserve_keys' => false,
+      'update_object' => true,
+      'unique_key' => 'name',
+    ),
+    'Chunks' => 
+    array (
+      'preserve_keys' => false,
+      'update_object' => false,
+      'unique_key' => 'name',
+    ),
+    'Plugins' => 
+    array (
+      'preserve_keys' => false,
+      'update_object' => true,
+      'unique_key' => 'name',
+    ),
+    'PluginEvents' => 
+    array (
+      'preserve_keys' => true,
+      'update_object' => true,
+      'unique_key' => 
+      array (
+        0 => 'pluginid',
+        1 => 'event',
+      ),
+    ),
+  ),
+  'namespace' => 'msto',
+  'resolve' => 
+  array (
+    0 => 
+    array (
+      'type' => 'file',
+      'body' => '{"source":"mstradeoffers-1.1.1-beta\\/modCategory\\/335fa128ebd860942e74d12a7e2aeb03\\/0\\/","target":"return MODX_ASSETS_PATH . \'components\\/\';","name":"msto"}',
+    ),
+    1 => 
+    array (
+      'type' => 'file',
+      'body' => '{"source":"mstradeoffers-1.1.1-beta\\/modCategory\\/335fa128ebd860942e74d12a7e2aeb03\\/1\\/","target":"return MODX_CORE_PATH . \'components\\/\';","name":"msto"}',
+    ),
+    2 => 
+    array (
+      'type' => 'php',
+      'body' => '{"source":"mstradeoffers-1.1.1-beta\\/modCategory\\/335fa128ebd860942e74d12a7e2aeb03.resolve.tables.resolver","type":"php","name":"resolve.tables"}',
+    ),
+    3 => 
+    array (
+      'type' => 'php',
+      'body' => '{"source":"mstradeoffers-1.1.1-beta\\/modCategory\\/335fa128ebd860942e74d12a7e2aeb03.resolve.chunks.resolver","type":"php","name":"resolve.chunks"}',
+    ),
+  ),
+  'validate' => NULL,
+  'vehicle_package' => 'transport',
+  'vehicle_class' => 'xPDOObjectVehicle',
+  'guid' => '1253aa6d0ca7427e51ebe222f1b1bd8a',
+  'package' => 'modx',
+  'class' => 'modCategory',
+  'signature' => '335fa128ebd860942e74d12a7e2aeb03',
+  'native_key' => NULL,
+  'object' => '{"id":null,"parent":0,"category":"msTradeOffers","rank":0}',
+);

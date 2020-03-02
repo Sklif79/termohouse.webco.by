@@ -1,0 +1,19 @@
+<?php return array (
+  'preserve_keys' => false,
+  'unique_key' => 
+  array (
+    0 => 'name',
+  ),
+  'update_object' => true,
+  'namespace' => 'msorderfiles',
+  'resolve' => NULL,
+  'validate' => NULL,
+  'vehicle_package' => 'transport',
+  'vehicle_class' => 'xPDOObjectVehicle',
+  'guid' => '4f6f179bf371e26bac6cafb50cdc7f3f',
+  'package' => 'modx',
+  'class' => 'modAccessPolicy',
+  'signature' => 'd8fcf883ac79f9584c0f9a575590134f',
+  'native_key' => NULL,
+  'object' => '{"id":null,"name":"msOrderFilesPolicy","description":"A policy for create \\/ update msOrderFiles.","parent":0,"template":0,"class":"","data":"{\\"msof_file_list\\":true,\\"msof_file_upload\\":true,\\"msof_file_update\\":true,\\"msof_file_remove\\":true}","lexicon":"msorderfiles:permissions"}',
+);

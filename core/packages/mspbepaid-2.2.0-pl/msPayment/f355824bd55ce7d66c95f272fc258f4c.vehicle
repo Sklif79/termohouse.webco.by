@@ -1,0 +1,15 @@
+<?php return array (
+  'unique_key' => 'class',
+  'preserve_keys' => false,
+  'update_object' => false,
+  'resolve' => NULL,
+  'validate' => NULL,
+  'package' => 'minishop2',
+  'vehicle_package' => 'transport',
+  'vehicle_class' => 'xPDOObjectVehicle',
+  'guid' => '50587bf2949c18eca284cfcfbbfef520',
+  'class' => 'msPayment',
+  'signature' => 'f355824bd55ce7d66c95f272fc258f4c',
+  'native_key' => NULL,
+  'object' => '{"id":null,"name":"BePaid \\u2013 Halva","description":null,"price":0,"logo":null,"rank":0,"active":0,"class":"BePaidHalva","properties":null}',
+);

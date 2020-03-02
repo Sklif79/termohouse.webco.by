@@ -1,0 +1,16 @@
+<?php return array (
+  'unique_key' => 'key',
+  'preserve_keys' => true,
+  'update_object' => false,
+  'namespace' => 'msorderfiles',
+  'resolve' => NULL,
+  'validate' => NULL,
+  'vehicle_package' => 'transport',
+  'vehicle_class' => 'xPDOObjectVehicle',
+  'guid' => 'df88b6020b2f2a89243c0ed3bc8f1c83',
+  'package' => 'modx',
+  'class' => 'modSystemSetting',
+  'signature' => '9b21b21cb9b94c2036bbc85bd23c650f',
+  'native_key' => 'msof_frontend_js',
+  'object' => '{"key":"msof_frontend_js","value":"[[+jsUrl]]web\\/default.js","xtype":"textfield","namespace":"msorderfiles","area":"msof_frontend","editedon":null}',
+);

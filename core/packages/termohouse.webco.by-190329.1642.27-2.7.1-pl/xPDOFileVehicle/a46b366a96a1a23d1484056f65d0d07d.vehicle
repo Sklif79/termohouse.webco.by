@@ -1,0 +1,15 @@
+<?php return array (
+  'class' => 'xPDOFileVehicle',
+  'object' => 
+  array (
+    'source' => 'termohouse.webco.by-190329.1642.27-2.7.1-pl/xPDOFileVehicle/a46b366a96a1a23d1484056f65d0d07d/',
+    'target' => 'return MODX_CORE_PATH;',
+    'name' => 'components',
+  ),
+  'vehicle_class' => 'xPDOFileVehicle',
+  'vehicle_package' => 'transport',
+  'guid' => '5b09d2c17522656e197a74221cdf65c7',
+  'package' => '',
+  'signature' => 'a46b366a96a1a23d1484056f65d0d07d',
+  'native_key' => '5b09d2c17522656e197a74221cdf65c7',
+);

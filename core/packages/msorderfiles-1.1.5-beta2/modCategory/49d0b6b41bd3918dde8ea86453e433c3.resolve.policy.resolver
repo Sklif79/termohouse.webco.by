@@ -1,0 +1,28 @@
+<?php
+
+if ($object->xpdo) {
+    /** @var modX $modx */
+    $modx = &$object->xpdo;
+
+    /** @var $options */
+    switch ($options[xPDOTransport::PACKAGE_ACTION]) {
+        case xPDOTransport::ACTION_INSTALL:
+        case xPDOTransport::ACTION_UPGRADE:
+            if ($policy = $modx->getObject('modAccessPolicy', array('name' => 'msOrderFilesPolicy'))) {
+                if ($template = $modx->getObject('modAccessPolicyTemplate',
+                    array('name' => 'msOrderFilesPolicyTemplate'))
+                ) {
+                    $policy->set('template', $template->get('id'));
+                    $policy->save();
+                } else {
+                    $modx->log(modX::LOG_LEVEL_INFO,
+                        '[msOrderFiles] Could not find msOrderFilesPolicyTemplate Access Policy Template!');
+                }
+            } else {
+                $modx->log(modX::LOG_LEVEL_INFO, '[msOrderFiles] Could not find msOrderFilesPolicy Access Policy!');
+            }
+            break;
+    }
+}
+
+return true;

@@ -1,0 +1,16 @@
+<?php return array (
+  'unique_key' => 'key',
+  'preserve_keys' => true,
+  'update_object' => false,
+  'namespace' => 'msto',
+  'resolve' => NULL,
+  'validate' => NULL,
+  'vehicle_package' => 'transport',
+  'vehicle_class' => 'xPDOObjectVehicle',
+  'guid' => '772d7f6a81e8dac0d1b8fd97ac53b484',
+  'package' => 'modx',
+  'class' => 'modSystemSetting',
+  'signature' => '06c1b28dce2a51a27668291b531bb8d4',
+  'native_key' => 'msto_frontend_js',
+  'object' => '{"key":"msto_frontend_js","value":"[[+assetsUrl]]js\\/web\\/default.js","xtype":"textfield","namespace":"msto","area":"msto_main","editedon":null}',
+);

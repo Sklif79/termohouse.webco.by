@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<model package="colors" baseClass="xPDOObject" platform="mysql" defaultEngine="MyISAM" version="1.1">
+    <object class="Color" table="my_colors" extends="xPDOSimpleObject">
+        <field key="color" dbtype="varchar" precision="255" phptype="string" null="false" default=""/>
+        <field key="image" dbtype="text" phptype="string" null="false" default="" />
+    </object>
+</model>

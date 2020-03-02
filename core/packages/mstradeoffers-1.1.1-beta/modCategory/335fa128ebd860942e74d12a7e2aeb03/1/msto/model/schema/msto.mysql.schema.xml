@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<model package="msto" baseClass="xPDOObject" platform="mysql" defaultEngine="MyISAM" phpdoc-package="msto"
+	   version="1.1">
+
+	 <object class="mstoOfferFile" table="msto_offers_files" extends="xPDOSimpleObject">
+		<field key="product_id" dbtype="int" precision="10" attributes="unsigned" phptype="integer" null="false" />
+		<field key="image_id" dbtype="int" precision="10" attributes="unsigned" phptype="integer" null="false" />
+		<field key="color" dbtype="varchar" precision="255" phptype="string" null="true" />
+		<aggregate alias="Offer" class="mstoOffer" local="offer_id" foreign="id" cardinality="one" owner="foreign"/>
+	</object>
+
+	<object class="mstoOffer" table="msto_offers" extends="xPDOSimpleObject">
+		<field key="product_id" dbtype="int" precision="10" attributes="unsigned" phptype="integer" null="false" />
+		<field key="name" dbtype="text" phptype="string" null="true"/>
+		<field key="desc" dbtype="text" phptype="string" null="true"/>
+		<field key="size" dbtype="varchar" precision="255" phptype="string" null="true" />
+		<field key="color" dbtype="varchar" precision="255" phptype="string" null="true" />
+		<field key="price" dbtype="int" precision="11" phptype="string" null="true" default="0" />
+		<field key="count" dbtype="int" precision="10" attributes="unsigned" phptype="integer" null="true" default="0" />
+		<field key="weight" dbtype="decimal" precision="13,3" phptype="float" null="true" default="0" />
+		<field key="article" dbtype="varchar" precision="50" phptype="varchar" null="true" default=""/>
+		<field key="active" dbtype="tinyint" precision="1" phptype="integer" null="true" default="1" />
+
+		<composite alias="Files" class="mstoOfferFile" local="id" foreign="offer_id" cardinality="many" owner="local"/>
+
+	</object>
+</model>
