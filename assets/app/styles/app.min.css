@@ -5873,7 +5873,7 @@ a {
 }
 
 .page-lines__user-data {
-    margin-bottom: 18px;
+    margin-bottom: 3px;
     text-align: right;
 }
 
@@ -5887,8 +5887,17 @@ a {
     display: -ms-flexbox;
 }
 
+.page-lines__cart {
+    display: inline-block;
+    background: #de892c;
+    color: #fff;
+    border-radius: 35px;
+    padding: 8px 24px;
+}
+
 .page-lines__cart .entitled-group__name {
     margin-bottom: 7px;
+    text-align: center;
 }
 
 .page-lines__office {
@@ -7483,6 +7492,7 @@ html.remodal-is-locked {
     .page-lines__cart .entitled-group__name {
         display: inline-block;
         padding-right: 10px;
+        margin-bottom: 0;
     }
 
     .entitled-group_def .entitled-group__name, .main-contacts__link_tel, .main-contacts__link_email {
